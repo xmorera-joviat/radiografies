@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost:8080/projectx/puja.php -->
+<html hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="./Pujar imatge_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./Pujar imatge_files/slider.css">
+	<script type="text/javascript" src="./Pujar imatge_files/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="./Pujar imatge_files/custom.js"></script>
+	<link href="./Pujar imatge_files/css" rel="stylesheet" type="text/css">
+	<title>Pujar imatge</title>
+	<script>
+	function outputUpdate1(vol) {
+	document.querySelector('#slider1').value = vol;
+	}
+	function outputUpdate2(vol) {
+	document.querySelector('#slider2').value = vol;
+	}
+	function outputUpdate3(vol) {
+	document.querySelector('#slider3').value = vol;
+	}
+	function outputUpdate4(vol) {
+	document.querySelector('#slider4').value = vol;
+	}
+	</script>
+	</head>
+
+ <body>
+
+ 	<nav class="navbar navbar-default">
+ 		<a class="navbar-brand" href="http://localhost:8080/projectx/puja.php#">Projecte Xray</a>
+ 		<ul class="nav navbar-nav">
+ 			<li><a href="http://localhost:8080/projectx/main.php">Home</a></li>
+ 		</ul>
+ 		<ul class="nav navbar-nav navbar-right">
+ 			<li><a href="http://localhost:8080/projectx/logout.php">Desconectar</a></li>
+ 		</ul>
+ 	</nav>
+
+ 	<div style="text-align:center"> 
+ 		<form action="http://localhost:8080/projectx/upload.php" method="POST" enctype="multipart/form-data">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-sm-6 col-md-6 col-lg-6">
+
+				<img class="img-responsive" src="./Pujar imatge_files/F IV.jpg" style="width: 480px; height: 320px; align:center">
+
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+
+				<!-- Primera barra slider -->
+				<div class="row">
+					<div class="col-md-11 col-lg-11">
+						<input type="range" name="slider1" min="0" max="150" value="0" id="fader" step="2" oninput="outputUpdate1(value)">
+					</div>
+					<div class="col-md-1 col-lg-1">
+						<label for="fader">kW</label><output for="fader" id="slider1">0</output> 
+					</div>
+				</div>
+
+				<!-- Segona barra slider -->
+
+				<div class="row">
+					<div class="col-md-11 col-lg-11">
+						<input type="range" name="slider2" min="0" max="100" value="0" id="fader" step="10" oninput="outputUpdate2(value)">
+					</div>
+					<div class="col-md-1 col-lg-1">
+						<label for="fader">mA</label><output for="fader" id="slider2">0</output> 
+					</div>
+				</div>
+
+				<!-- Tercera barra slider 3 -->
+
+				<div class="row">
+					<div class="col-md-11 col-lg-11">
+						<input type="range" name="slider3" min="0.25" max="1" value="0.25" id="fader" step="0.25" oninput="outputUpdate3(value)">
+					</div>
+					<div class="col-md-1 col-lg-1">
+						<label for="fader">Temps</label><output for="fader" id="slider3">0.25</output> 
+					</div>
+				</div>
+
+				<!-- cuarta barra slider -->   
+
+				<div class="row">
+					<div class="col-md-11 col-lg-11">
+						<input type="range" name="slider4" min="0" max="100" value="0" id="fader" step="10" oninput="outputUpdate4(value)">
+					</div>
+					<div class="col-md-1 col-lg-1">
+						<label for="fader">mAs</label><output for="fader" id="slider4">0</output> 
+					</div>
+				</div>
+			<!-- sliders Fi -->
+
+		</div>
+	</div>
+		<div class="row">
+			<div class="col-md-3 col-lg-3">
+
+				<div class="btn-group-1" role="group" aria-label="...">
+					<label> Càmeres </label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/1.png" width="60">
+						<input type="checkbox" autocomplete="off" name="camleft" value="1">
+					</label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/2.png" width="60">
+						<input type="checkbox" autocomplete="off" name="camcenter" value="1">	
+					</label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/3.png" width="60">
+						<input type="checkbox" autocomplete="off" name="camright" value="1">	
+					</label>
+				</div>
+				<div class="btn-group-2" role="group" aria-label="...">
+					<label> Bucky </label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/taula.png" id="changer" onclick="changeImage(this)" width="60">
+						<input type="radio" name="bucky" value="taula">
+					</label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/mural-1.png" id="changer" onclick="changeImage2(this)" width="60">
+						<input type="radio" name="bucky" value="mural">	
+					</label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/directe.png" id="changer" onclick="changeImage3(this)" width="60">
+						<input type="radio" name="bucky" value="directe">	
+					</label>
+				</div>
+				<div class="btn-group-3" role="group" aria-label="...">
+					<label> Focus </label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/fi.png" width="60">
+						<input type="radio" name="focus" value="fi">
+					</label>
+					<label class="class btn1 btn-success active">
+						<img src="./Pujar imatge_files/gruixut.png" width="60">
+						<input type="radio" name="focus" value="gruixut">	
+					</label>
+				</div>
+
+			</div>
+			<div class="col-md-5 col-lg-5">
+
+				<div class="form-group has-feedback col-md-6 col-lg-6">
+										<label style="margin-top:30px">Localització anatòmica</label>
+					<select class="form-control" name="loc">&gt;
+						
+						<option value="1" selected="">no definit</option><option value="2">zona a</option><option value="6">zona b</option><option value="7">zona c</option>						</select>Os
+						<select class="form-control" name="os">
+							<option value="1" selected="">no definit</option><option value="2">Costella</option><option value="3">Cúbit</option><option value="4">Estèrnum</option>						</select>Centratge
+						<select class="form-control" name="centratge">
+							<option value="1" selected="">no definit</option><option value="2">cent a</option><option value="3">cent b</option>						</select>Posició
+						<select class="form-control" name="posicio">
+							<option value="1" selected="">no definit</option><option value="2">alpha</option><option value="3">omega</option>						</select>
+					<div class="col-md-4 col-lg-4">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-md-6 col-lg-6"></div>
+			<div class="col-xs-6 col-md-6 col-lg-6">
+				<input type="submit" class="btn btn-primary" value="Pujar imatge" name="submit">
+			</div>
+		</div>
+	
+
+</div></form>
+
+</div></body></html>
