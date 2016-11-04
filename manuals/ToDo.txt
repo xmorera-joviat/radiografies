@@ -1,4 +1,6 @@
-* Crear Script d'actualització del servidor i cron (xmorera)
+* Crear Script d'actualització del servidor i cron (xmorera) 
+	- Script creat (està a la carpeta manuals)
+	
 
 * crear una pàgina d'inici un cop logejat el professor i mostrar el Control Panel Professor (assignació?)
 
@@ -15,4 +17,6 @@
 * Organització de carpetes i fitxers (assignació?)
 
 * Refactoritzar, unificar i optimitzar noms de variables i mètodes (assignació?)
+
+* Pàgina inicial d'alumne surt en blanc (assignació?)
 

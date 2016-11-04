@@ -16,3 +16,5 @@ git pull
 # les 5 del matí.
 #########
 # 0 5 * * * /root/scripts/server_git_pull.sh >> /dev/null 2>&1
+#
+# s'usa crontab -e per introduir aquesta entrada
