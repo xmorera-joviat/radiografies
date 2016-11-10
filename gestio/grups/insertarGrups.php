@@ -1,6 +1,9 @@
 <?php
-include 'session.h';
-include 'connect.h';
+$base ="../../";
+
+include $base.'includes/session.h';
+include $base.'includes/connect.h';
+
 	$query = "INSERT INTO grups (grup_nom, curs_curs_id, tutor_id) VALUES (";
 	$query = $query."'".$_POST['grup']."', ";
 	$query = $query."'".$_POST['CodiCurs']."', ";

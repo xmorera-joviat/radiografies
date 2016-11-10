@@ -1,6 +1,8 @@
 <?php
-include 'session.h';
-include 'connect.h';
+$base ="../../";
+
+include $base.'includes/session.h';
+include $base.'includes/connect.h';
 
 	$query = "UPDATE grups SET grup_nom=";
 	$query = $query."'".$_POST['nom']."', ";
