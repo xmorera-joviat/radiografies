@@ -1,1 +1,2 @@
-test_conflicte.php
+test_conflicte.php, modificació xavier
+
