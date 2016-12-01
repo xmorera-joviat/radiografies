@@ -13,14 +13,6 @@
         <li class="dropdown">
           <a href="http://<?php echo $_SESSION['basepath'];?>/gestio/usuaris/gestioUsuaris.php">Gestió Alumnes</a>
         </li>
-
-        <li class="dropdown">
-          <a href="users.php" class="dropdown-toggle" data-toggle="dropdown">Grups (en construcció)<b class="caret"></b></a>
-          <ul class="dropdown-menu navmenu-nav">
-          
-          
-          </ul>
-        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestió Lliçons (en construcció)<b class="caret"></b></a>
           <ul class="dropdown-menu navmenu-nav">
