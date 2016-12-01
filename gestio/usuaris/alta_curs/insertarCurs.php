@@ -3,10 +3,14 @@ $base ="../../../";
 include $base.'includes/session.h';
 include $base.'includes/connect.h';
 
-	$query = "INSERT INTO curs VALUES (";
-	$query = $query."'".$_POST['curs']."')";
-	//echo $query;
-	$result = mysqli_real_query ($mysqli,$query);
+	$sql= "INSERT INTO curs(anyInici,anyFI) VALUES (";
+	$sql= $sql . "'".$_POST['cursIn'];
+	$sql= $sql . "','";
+	
+	$sql= $sql . $_POST['cursFi'];
+	$sql= $sql . "')";
+	//echo $sql;
+	$result = mysqli_real_query ($mysqli,$sql);
 
 	header('Location: ../gestioUsuaris.php#Quadrat3');
 	

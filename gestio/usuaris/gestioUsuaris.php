@@ -130,8 +130,8 @@ include $base.'includes/connect.h';
 								<span class="input-group-btn">
 								  <button class="btn btn-default" type="submit">Insertar nou curs</button>
 								</span>
-								<input type="text" class="form-control" name="curs" placeholder="Any curs (aaaa/aaaa)" required>
-
+								<input type="text" class="form-control" name="cursIn" placeholder="Any Inicial (aaaa/aaaa)" required>
+								<input type="text" class="form-control" name="cursFi" placeholder="Any Final (aaaa/aaaa)" required>
 							  </div>
 							</form>
 
@@ -250,7 +250,7 @@ include $base.'includes/connect.h';
 										//'".$_SESSION['codi']."'
 									$result = mysqli_query($mysqli, $sql);
 									while ($fila = mysqli_fetch_assoc($result)){
-									echo "<option value='".$fila['curs_id']."'>".$fila['any']."</option>";
+									echo "<option value='".$fila['curs_id']."'>".$fila['anyInici']."/".$fila['anyFI']."</option>";
 									}
 								?>
 								</select>
@@ -284,7 +284,7 @@ include $base.'includes/connect.h';
 					   // $mysqli = mysqli_connect("localhost", "test", "test", "projectx");
 						mysqli_query ($mysqli,"SET NAMES 'utf8'");
 
-						$sql="SELECT g.grup_id, g.grup_nom, c.any FROM grups g, curs c WHERE g.curs_curs_id=c.curs_id;";
+						$sql="SELECT g.grup_id, g.grup_nom, c.anyInici, c.anyFI FROM grups g, curs c WHERE g.curs_curs_id=c.curs_id;";
 							//'".$_SESSION['codi']."'
 						$result = mysqli_query($mysqli, $sql);
 						$rowcount=mysqli_num_rows($result);
@@ -303,7 +303,7 @@ include $base.'includes/connect.h';
 						echo "</td>";
 
 						echo "<td align='center' >";
-						echo $row3['any'];
+						echo $row3['anyInici']."/".$row3['anyFI'];
 						echo "</td>";
 
 						echo "<td align='center' >";
@@ -343,7 +343,7 @@ include $base.'includes/connect.h';
 									//'".$_SESSION['codi']."'
 								$resultado = mysqli_query($mysqli, $grup);
 								while ($fila1 = mysqli_fetch_assoc($resultado)){
-								echo "<option value='".$fila1['curs_id']."'>".$fila1['any']."</option>";
+								echo "<option value='".$fila1['curs_id']."'>".$fila1['anyInici']."/".$fila1['anyFI']."</option>";
 								}
 							echo "</select>";
 							echo "</td>";
