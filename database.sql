@@ -215,7 +215,8 @@ CREATE TABLE `llico` (
   `llico_nom` varchar(45) COLLATE utf8_bin DEFAULT NULL,
   `percentatge` int(11) DEFAULT NULL,
   `tema_tema_id` int(11) NOT NULL,
-  `ordre_llico` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  -- ordre_llico l'hem canviat de varchar(45) a int(11).
+  `ordre_llico` int(11) COLLATE utf8_bin DEFAULT NULL,
   `tipusllico_id` int(11) NOT NULL,
   `descripcio` varchar(250) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
