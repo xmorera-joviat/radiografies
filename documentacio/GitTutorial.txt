@@ -1,0 +1,37 @@
+Comandes bàsiques de git.
+
+crear un compte a github
+
+# importar un projecte al directori seleccionat (actual)
+git clone 'url_del_lloc_a_importar'
+
+# actualitzar el directori de treball amb el repositori
+git pull
+
+# fer els canvis que dins el directori de treball local
+
+# pujar actualitzacions
+git add -A (git add 'fitxer')
+
+#validar canvis i afegir missatge
+git commit
+
+# pujar directori de treball al repositori
+git push
+
+# crear una branca nova
+git branch 'nom_de_la_branca'
+
+# canviar a una branca
+git checkout 'nom_de_la_branca'
+
+# afegir documents a la branca
+git add -A
+
+# validar canvis
+git commit
+
+# pujar canvis a la branca
+git checkout master
+git push 'url_del_repositori' 'nom_de_la_branca'
+
