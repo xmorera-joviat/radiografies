@@ -1,0 +1,3 @@
+<template name="homeProfessor">
+
+</template>
