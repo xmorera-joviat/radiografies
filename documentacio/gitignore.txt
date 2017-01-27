@@ -1,1 +1,0 @@
-Heu de crear un fitxer ocult anomenat ".gitignore" a l'arrel del projecte, que contingui "/assets/imatges/"

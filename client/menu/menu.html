@@ -1,0 +1,15 @@
+<!--Sergey Musyus -->
+<template name="menu">
+
+  {{#if isInRole 'admin'}}
+    {{> administrador}}
+  {{/if}}
+
+  {{#if isInRole 'professor'}}
+    {{> administrador}}
+  {{/if}}
+
+  {{#if isInRole 'alumne'}}
+    {{> administrador}}
+  {{/if}}
+</template>
