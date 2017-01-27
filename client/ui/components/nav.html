@@ -6,14 +6,16 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
       </button>
-      <a class="navbar-brand" href="#">Posicions anatòmiques</a>
+      <a class="navbar-brand" href="#">Radiografies</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
           {{#if currentUser}}
-        <li><a href="{{pathFor 'home'}}">Posicions</a></li>
+          <li><a href="{{pathFor 'home'}}">Posicions</a></li>
+          <li><a href="{{pathFor 'test'}}">Test</a></li>
+          <li><a href="{{pathFor 'users'}}">Rols</a></li>
           {{/if}}
       </ul>
 
