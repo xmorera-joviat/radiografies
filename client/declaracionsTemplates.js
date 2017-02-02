@@ -1,3 +1,4 @@
+// creat per Raül López 
 Template.nomTemplate.helpers({
 // args: objects, Dictionary of helper functions by name.
 // Each template has a local dictionary of helpers that are made available to it, and this call specifies helpers to add to the

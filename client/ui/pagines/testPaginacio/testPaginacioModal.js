@@ -1,3 +1,4 @@
+// creat per Raül López
 Template.testModal.events({
   "click .editar": function(event, template){
     var obj = {};
@@ -23,7 +24,7 @@ Template.testModal.events({
     obj.os        = $('input[name="modalOs"]').val();
     obj.posicio   = $('input[name="modalPosicio"]').val();
     obj.centratge = $('input[name="modalCentratge"]').val();
-    
+
     Meteor.call('crearTest', obj);
     Modal.hide();
   }

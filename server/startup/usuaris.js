@@ -1,3 +1,4 @@
+//creat per Raül López
 if(Meteor.users.find().count() == 0){
   var users = [
         {name:"Usuari professor",email:"professor@joviat.com",roles:['professor']},

@@ -1,3 +1,4 @@
+<!-- creat per Raül López -->
 <template name="rols">
   <div class="container" style="margin-top: 50px">
   {{#if isInRole 'admin,professor'}}
@@ -25,7 +26,6 @@
                 <option value="alumne">alumne</option>
                 {{#if isInRole 'admin'}}
                 <option value="professor">professor</option>
-                <option value="admin">admin</option>
                 {{/if}}
               </select>
             </td>
@@ -34,7 +34,6 @@
                 <option value="alumne">alumne</option>
                 {{#if isInRole 'admin'}}
                 <option value="professor">professor</option>
-                <option value="admin">admin</option>
                 {{/if}}
               </select>
             </td>

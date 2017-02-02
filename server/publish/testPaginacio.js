@@ -1,3 +1,4 @@
+//creat per Raül López
 Meteor.publish('test', function () {
     return Test.find({});
 });

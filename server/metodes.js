@@ -1,3 +1,4 @@
+//creat per Raül López
 Meteor.methods({
   /**********************************+ TEST PAGINACIO *********************************/
   editarTest: function (object,id) {

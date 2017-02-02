@@ -1,3 +1,4 @@
+// creat per Raül López
 import { _ } from 'meteor/underscore';
 
 Template.test.onCreated(function(){
