@@ -1,3 +1,19 @@
-<template name="homeProfessor">
+Template.professor.helpers({
 
-</template>
+});
+
+Template.professor.events({
+
+});
+
+Template.professor.onCreated(function () {
+
+});
+
+Template.professor.onRendered(function () {
+
+});
+
+Template.professor.onDestroyed(function () {
+
+});

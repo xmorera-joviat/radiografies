@@ -1,3 +1,19 @@
-<template name="homeAdmin">
+Template.administrador.helpers({
 
-</template>
+});
+
+Template.administrador.events({
+
+});
+
+Template.administrador.onCreated(function () {
+
+});
+
+Template.administrador.onRendered(function () {
+
+});
+
+Template.administrador.onDestroyed(function () {
+
+});

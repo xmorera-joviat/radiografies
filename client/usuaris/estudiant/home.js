@@ -1,3 +1,19 @@
-<template name="homeEstudiant">
+Template.alumne.helpers({
 
-</template>
+});
+
+Template.alumne.events({
+
+});
+
+Template.alumne.onCreated(function () {
+
+});
+
+Template.alumne.onRendered(function () {
+
+});
+
+Template.alumne.onDestroyed(function () {
+
+});
