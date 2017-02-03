@@ -1,8 +1,37 @@
 
 <template name="menu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   {{#if isInRole 'admin'}}
-    {{> administrador}}
-  {{/if}}
+    <!--{{> administrador}}-->
+    <!-- Sidenav/menu -->
+  <div class="side-menu">
+    <nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+          <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">-->
+        </div>
+        <div class="w3-col s8">
+          <span>Has entrat com, <strong>Rol</strong></span><br>
+          <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="w3-container">
+        <h5>Panell usuari *ROL*</h5>
+      </div>
+      <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Tencar Menú</a>
+      <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
+      <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Text per definir</a>
+      <a href="#" class="w3-padding"><i class="fa fa-cog fa-fw"></i>  Text per definir</a><br><br>
+    </nav>
+  </div>
+{{/if}}
 
   {{#if isInRole 'professor'}}
     {{> professor}}
