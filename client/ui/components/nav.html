@@ -1,28 +1,49 @@
 <template name="nav">
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-      <a class="navbar-brand" href="#">Radiografies</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-          {{#if currentUser}}
-          <li><a href="{{pathFor 'home'}}">Posicions</a></li>
-          <li><a href="{{pathFor 'test'}}">Test</a></li>
-          <li><a href="{{pathFor 'users'}}">Rols</a></li>
-          {{/if}}
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
+  <!-- Top container -->
+  <div class="w3-container w3-top w3-blue w3-large w3-padding" style="z-index:4">
+    <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <ul class="topMenu">
+      <li class="topMenu"><a href="{{pathFor 'home'}}">Posicions</a></li>
+      <li class="topMenu"><a href="{{pathFor 'test'}}">Test</a></li>
+      <li class="topMenu"><a href="{{pathFor 'users'}}">Rols</a></li>
+    </ul>
+    <!--<span class="w3-right">RadioSimulator</span>-->
+    <ul class="w3-right">
         <li style="margin-right:150px"><a href="#">{{> loginButtons}}</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </ul>
+  </div>
+
+  <!-- Sidenav/menu -->
+  <nav class="w3-sidenav w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidenav">
+    {{> menu}}
+  </nav>
+  <!-- Overlay effect when opening sidenav on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+  <script>
+    // Get the Sidenav
+    var mySidenav = document.getElementById("mySidenav");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidenav, and add overlay effect
+    function w3_open() {
+        if (mySidenav.style.display === 'block') {
+            mySidenav.style.display = 'none';
+            overlayBg.style.display = "none";
+        } else {
+            mySidenav.style.display = 'block';
+            overlayBg.style.display = "block";
+        }
+    }
+
+    // Close the sidenav with the close button
+    function w3_close() {
+        mySidenav.style.display = "none";
+        overlayBg.style.display = "none";
+    }
+  </script>
 </template>
