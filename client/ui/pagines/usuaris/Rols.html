@@ -1,0 +1,50 @@
+<template name="rols">
+  <div class="container" style="margin-top: 50px">
+  {{#if isInRole 'admin,professor'}}
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Assignació de rols
+    </div>
+    <div class="panel-body">
+    <table class="table table-striped">
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Rols</th>
+        <th>Assignar rol</th>
+        <th>Retirar rol</th>
+      </tr>
+        {{#each users}}
+          <tr>
+            <td class="user_id">{{_id}}</td>
+            <td>{{userEmail}}</td>
+            <td>{{rols}}</td>
+            <td>
+              <select class="addRol">
+                <option value="alumne">alumne</option>
+                {{#if isInRole 'admin'}}
+                <option value="professor">professor</option>
+                <option value="admin">admin</option>
+                {{/if}}
+              </select>
+            </td>
+            <td>
+              <select class="delRol">
+                <option value="alumne">alumne</option>
+                {{#if isInRole 'admin'}}
+                <option value="professor">professor</option>
+                <option value="admin">admin</option>
+                {{/if}}
+              </select>
+            </td>
+          </tr>
+        {{/each}}
+    </table>
+  </div>
+</div>
+  <!--{{else}}
+    <h1>Es requereix un nivell d'accés superior. Contacti amb un administrador</h1> -->
+  {{/if}}
+</div>
+</template>
