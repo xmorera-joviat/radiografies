@@ -1,5 +1,6 @@
 <template name="nav">
 
+<<<<<<< HEAD
   <!-- Top container -->
   <div class="w3-container w3-top w3-blue w3-large w3-padding" style="z-index:4">
     <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" id="btn-menuOpen"><i class="fa fa-bars"></i>  Menu</button>
@@ -11,6 +12,19 @@
     </ul>
     <!--<span class="w3-right">RadioSimulator</span>-->
     <ul class="w3-right">
+=======
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          {{#if currentUser}}
+          <li><a href="{{pathFor 'home'}}">Posicions</a></li>
+          <li><a href="{{pathFor 'test'}}">Test</a></li>
+          <li><a href="{{pathFor 'rols'}}">Rols</a></li>
+          {{/if}}
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+>>>>>>> master
         <li style="margin-right:150px"><a href="#">{{> loginButtons}}</a></li>
     </ul>
   </div>

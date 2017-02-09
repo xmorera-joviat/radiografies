@@ -1,0 +1,14 @@
+
+<template name="menu">
+  {{#if isInRole 'admin'}}
+    {{> administrador}}
+  {{/if}}
+
+  {{#if isInRole 'professor'}}
+    {{> professor}}
+  {{/if}}
+
+  {{#if isInRole 'alumne'}}
+    {{> alumne}}
+  {{/if}}
+</template>

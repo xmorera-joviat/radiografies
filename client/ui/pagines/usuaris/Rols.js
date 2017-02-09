@@ -1,11 +1,11 @@
-Template.users.onCreated(function(){
+Template.rols.onCreated(function(){
   this.autorun(()=>{
     Meteor.subscribe('allUsers');
     //podem fer this pq fem servir una arrow function sinó hauriem
     //de fer that i declarar un var that = this fora de l'autorun.
   });
 });
-Template.users.helpers({
+Template.rols.helpers({
   users: function() {
     return Meteor.users.find();
   },
@@ -19,7 +19,7 @@ Template.users.helpers({
     return Roles.getRolesForUser(this._id);
   }
 });
-Template.users.events({
+Template.rols.events({
   'change .addRol': function() {
     var rol = $('.addRol').val();
     Meteor.call('afegirRol', this._id, rol);
