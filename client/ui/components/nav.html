@@ -2,11 +2,12 @@
 
   <!-- Top container -->
   <div class="w3-container w3-top w3-blue w3-large w3-padding" style="z-index:4">
-    <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    <button class="w3-btn w3-hide-large w3-padding-0 w3-hover-text-grey" id="btn-menuOpen"><i class="fa fa-bars"></i>  Menu</button>
     <ul class="topMenu">
       <li class="topMenu"><a href="{{pathFor 'home'}}">Posicions</a></li>
       <li class="topMenu"><a href="{{pathFor 'test'}}">Test</a></li>
       <li class="topMenu"><a href="{{pathFor 'users'}}">Rols</a></li>
+      <li class="topMenu"><a href="{{pathFor 'imatges'}}">Llistar Imatges</a></li>
     </ul>
     <!--<span class="w3-right">RadioSimulator</span>-->
     <ul class="w3-right">
@@ -19,31 +20,7 @@
     {{> menu}}
   </nav>
   <!-- Overlay effect when opening sidenav on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 
-  <script>
-    // Get the Sidenav
-    var mySidenav = document.getElementById("mySidenav");
-
-    // Get the DIV with overlay effect
-    var overlayBg = document.getElementById("myOverlay");
-
-    // Toggle between showing and hiding the sidenav, and add overlay effect
-    function w3_open() {
-        if (mySidenav.style.display === 'block') {
-            mySidenav.style.display = 'none';
-            overlayBg.style.display = "none";
-        } else {
-            mySidenav.style.display = 'block';
-            overlayBg.style.display = "block";
-        }
-    }
-
-    // Close the sidenav with the close button
-    function w3_close() {
-        mySidenav.style.display = "none";
-        overlayBg.style.display = "none";
-    }
-  </script>
 </template>
