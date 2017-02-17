@@ -1,4 +1,4 @@
-Posicions = new Mongo.Collection( 'posicions' );
+export const Posicions = new Mongo.Collection( 'posicions' );
 
 PosicionsSchema = new SimpleSchema({
     'zona': {

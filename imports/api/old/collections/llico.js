@@ -1,5 +1,5 @@
 // Creat per Marc Vila i Jordi Real
-Llico = new Mongo.Collection( 'llico' );
+export const Llico = new Mongo.Collection( 'llico' );
 
 LlicoSchema = new SimpleSchema({
     'llico_nom': {

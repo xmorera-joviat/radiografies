@@ -1,4 +1,4 @@
-Artefactes = new Mongo.Collection( 'artefactes' );
+export const Artefactes = new Mongo.Collection( 'artefactes' );
 
 ArtefactesSchema = new SimpleSchema({
     'nom': {
