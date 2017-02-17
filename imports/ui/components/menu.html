@@ -1,93 +1,53 @@
-
 <!--
 Creat per: Sergey Musyus
 Funció: Pàgina amb 3 condicionals, en funció del rol del usuari mostrarem el menú que correspongui
  -->
 <template name="menu">
-
 <!-- Side Administrador -->
 {{#if isInRole 'admin'}}
-<nav class="w3-sidenav w3-collapse w3-blue w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
-  <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">-->
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Menú Admin</a>
+            <a href="#" class="list-group-item">Alta Usuaris</a>
+            <a href="#" class="list-group-item">Llistar Usuaris</a>
+          </div>
+        </div>
     </div>
-    <div class="w3-col s8"><br>
-      <span><strong>Administrador</strong></span><br/>
-      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Panell Administració</h5>
-  </div>
-  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Tencar Menu</a>
-  <a href="{{pathFor 'llistatUsuaris'}}" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Llistat Usuaris</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-diamond fa-fw"></i>  Text per definir</a>
-<br><br>
-</nav>
+</div>
 {{/if}}
 
-
-<!-- Side Professor -->
 {{#if isInRole 'professor'}}
-<nav class="w3-sidenav w3-collapse w3-blue w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
-  <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">-->
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Menú Profe</a>
+            <a href="#" class="list-group-item">Alta Alumnes</a>
+            <a href="#" class="list-group-item">Llistat Alumnes</a>
+            <a href="#" class="list-group-item">Temes</a>
+            <a href="#" class="list-group-item">Gestió Grup</a>
+          </div>
+        </div>
     </div>
-    <div class="w3-col s8"><br>
-      <span><strong>Professor</strong></span><br/>
-      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Panell Administració</h5>
-  </div>
-  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-diamond fa-fw"></i>  Text per definir</a>
-<br><br>
-</nav>
-
+</div>
 {{/if}}
-
-<!-- Side Alumne -->
 {{#if isInRole 'alumne'}}
-<nav class="w3-sidenav w3-collapse w3-blue w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
-  <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <!--<img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">-->
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Menú Alumne</a>
+            <a href="#" class="list-group-item">Activitats no avaluables</a>
+            <a href="#" class="list-group-item">Temes</a>
+            <a href="#" class="list-group-item">Gestó</a>
+            <a href="#" class="list-group-item">Exàmen</a>
+          </div>
+        </div>
     </div>
-    <div class="w3-col s8"><br>
-      <span><strong>Alumne</strong></span><br/>
-      <a href="#" class="w3-hover-none w3-hover-text-red w3-show-inline-block"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-green w3-show-inline-block"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-hover-none w3-hover-text-blue w3-show-inline-block"><i class="fa fa-cog"></i></a>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Panell Administració</h5>
-  </div>
-  <a href="#" class="w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-  <a href="#" class="w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-eye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-users fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Text per definir</a>
-  <a href="#" class="w3-padding"><i class="fa fa-diamond fa-fw"></i>  Text per definir</a>
-<br><br>
-</nav>
+</div>
 {{/if}}
+
+
 </template>
