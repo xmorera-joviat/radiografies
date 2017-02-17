@@ -1,0 +1,3 @@
+// creat per Raül López
+// Més exemples ...
+export const Test = new Mongo.Collection('test');

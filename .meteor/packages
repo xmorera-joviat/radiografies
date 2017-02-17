@@ -25,14 +25,15 @@ iron:router
 twbs:bootstrap
 aldeed:collection2
 meteortoys:allthings
-underscore
+underscore@1.0.10
 
-accounts-ui
-accounts-password
-session
+accounts-ui@1.1.9
+accounts-password@1.3.3
+session@1.1.7
 aldeed:autoform
 alanning:roles
 aldeed:tabular
 aslagle:reactive-table
-aramk:collection-table
 peppelg:bootstrap-3-modal
+mdg:validated-method
+aldeed:simple-schema

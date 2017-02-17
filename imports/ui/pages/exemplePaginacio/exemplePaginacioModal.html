@@ -1,0 +1,74 @@
+<!-- creat per Raül López
+ Exemple per veure la sintaxi ES2015
+-->
+<template name="testModal">
+  <div class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <div class="modal-header">
+                  <h4 class="modal-title">Posicions</h4>
+              </div>
+
+              <div class="modal-body">
+                  <form id="editarElimnar">
+                    <div class="container">
+
+                      <div class="col-md-12 col-lg-12">
+                        <div class="input-group">
+                          <input type="hidden" class="form-control" name="modalId">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                          <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                            <span class="input-group-addon" id="zona" style="width:100px;">Zona</span>
+                            <input type="text" class="form-control" placeholder="Zona" aria-describedby="basic-addon1" name="modalZona">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                          <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                            <span class="input-group-addon" id="os" style="width:100px;">Os</span>
+                            <input type="text" class="form-control" placeholder="Os" aria-describedby="basic-addon1" name="modalOs">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                              <span class="input-group-addon" id="posicio" style="width:100px;">Posició</span>
+                              <input type="text" class="form-control" placeholder="Posició" aria-describedby="basic-addon1" name="modalPosicio">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                          <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                            <span class="input-group-addon" id="centratge" style="width:100px;">Centratge</span>
+                            <input type="text" class="form-control" placeholder="Centratge" aria-describedby="basic-addon1" name="modalCentratge">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+                  {{#if accio}}
+                  <button type="button" class="btn btn-success editar">Editar</button>
+                  <button type="button" class="btn btn-danger eliminar">Eliminar</button>
+                  {{else}}
+                  <button type="button" class="btn btn-success desar">Desar</button>
+                  {{/if}}
+              </div>
+
+          </div>
+      </div>
+  </div>
+</template>
