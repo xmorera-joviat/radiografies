@@ -1,6 +1,8 @@
 /**
  * Created by Toni Salvador i Martí Gual
  */
+import '../old/collections/tema.js';
+
 TabularTables = {};
 
 Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
