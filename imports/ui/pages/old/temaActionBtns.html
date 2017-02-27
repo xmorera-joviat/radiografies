@@ -1,17 +1,42 @@
 <!--Created by Toni Salvador i Martí Gual-->
-<template name="temaActionBtns">
-
-
-    <button id="btnUpdate" type="button" class="btn btn-sm btn-default"  data-toggle="modal" data-target="#updateModal">
-
+<template name="temesEditar">
+  <button id="editar" type="button" class="btn btn-sm btn-success"  data-toggle="modal" data-target="#editarModal">
 		<span class="glyphicon glyphicon-pencil"></span>
-
 	</button>
-
-	<button id="btnRemove" type="button" class="btn btn-sm btn-default"  data-toggle="modal" data-target="#removeModal">
-
-		<span class="glyphicon glyphicon-remove"></span>
-
-	</button>
-
+  <div class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">Temes</h4>
+              </div>
+              <div class="modal-body">
+                  <form id="editar">
+                    <div class="container">
+                      <div class="col-md-12 col-lg-12">
+                        <div class="input-group">
+                          <input type="hidden" class="form-control" name="modalId">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                          <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                            <span class="input-group-addon" id="nom" style="width:100px;">Nom</span>
+                            <input type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1" name="modalNom">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                          <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                            <span class="input-group-addon" id="descripcio" style="width:100px;">Descripció</span>
+                            <input type="text" class="form-control" placeholder="Descripció" aria-describedby="basic-addon1" name="modalDescripcio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
 </template>
