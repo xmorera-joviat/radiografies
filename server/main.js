@@ -11,3 +11,6 @@ import '../imports/api/rols/methods.js';
 import insercions from '../imports/startup/server/index.js';
 insercions();
 // Insercions inicials de la base de dades //
+
+//Importem la publicació de grups.
+import '../imports/api/old/publish/grupsPublish.js';
