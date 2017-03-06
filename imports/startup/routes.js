@@ -1,7 +1,6 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
-import '../ui/components/insertGroups.js';
 
 
 
@@ -27,6 +26,6 @@ Router.route('/tema',function(){
 Router.route('/llistatUsuaris',function(){
     this.render('llistatUsers');
 });
-Router.route('/insertGroups',function(){
-    this.render('insertGroups');
+Router.route('/grups',function(){
+    this.render('grups');
 });

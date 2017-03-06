@@ -1,9 +1,6 @@
 // Creat per Aitor G. Vall
+Grups = new Mongo.Collection( 'grups' );
 
-import { SimpleSchema } from 'meteor/aldeed:simple-schema';
-
-export const Grups = new Mongo.Collection( 'grups' );
-console.log("grups.js");
 GrupsSchema = new SimpleSchema({
     'nom': {
         type: String,
