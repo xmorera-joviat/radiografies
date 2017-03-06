@@ -4,6 +4,8 @@ pubExemple();
 
 
 // Importacions de fitxers de mètodes
+import '../imports/api/temes/temes.js';
+import '../imports/api/usuaris/tabularUsers.js';
 import '../imports/api/exemplePaginacio/methods.js';
 import '../imports/api/rols/methods.js';
 
