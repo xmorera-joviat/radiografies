@@ -6,10 +6,11 @@
  import './temaActionBtns.js';
  import {Tema} from '../../../api/tema/temaTabular.js';
  import { _ } from 'meteor/underscore';
- 
-Meteor.subscribe('Tema');
-Template.temaLlistat.onCreated(function(){
-  this.autorun(()=>{
-    this.subscribe('tema');
-  });
-});
+
+ Template.tema.onCreated(function(){
+   this.autorun(()=>{
+     this.subscribe('tema');
+   });
+ });
+
+//Meteor.subscribe('Tema');

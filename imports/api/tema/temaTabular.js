@@ -1,8 +1,8 @@
 /**
  * Created by Toni Salvador i Martí Gual
  */
-import '../old/collections/tema.js';
-
+import {Meteor} from 'meteor/meteor';
+import { Tema } from '../old/collections/tema.js';
 TabularTables = {};
 
 Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
@@ -21,3 +21,9 @@ TabularTables.Tema = new Tabular.Table({
         }
     ]
 });
+
+export default function () {
+  Meteor.publish('tema', function () {
+      return Tema.find({});
+  });
+};
