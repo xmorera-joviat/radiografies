@@ -2,6 +2,8 @@
 import pubExemple from '../imports/api/exemplePaginacio/server/publicacio.js';
 pubExemple();
 
+//Importació del llistat grups.
+import '../imports/api/grups/grups.js';
 
 // Importacions de fitxers de mètodes
 import '../imports/api/exemplePaginacio/methods.js';
