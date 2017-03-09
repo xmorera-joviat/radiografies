@@ -1,0 +1,53 @@
+<template name="temaModal">
+ <div class="modal fade">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h4 class="modal-title">Tema</h4>
+       </div>
+       <div class="modal-body">
+         <form id="form">
+           <div class="container">
+             <div class="row">
+               <div class="col-md-12 col-lg-12">
+                 <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                   <span class="input-group-addon" style="width:100px;">Id</span>
+                   <input type="text" class="form-control" aria-describedby="basic-addon1" name="modalId" disabled>
+                 </div>
+               </div>
+             </div>
+           <div class="row">
+             <div class="col-md-12 col-lg-12">
+               <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                 <span class="input-group-addon" style="width:100px;">Nom</span>
+                 <input type="text" class="form-control" aria-describedby="basic-addon1" name="modalNom" value="{{this.nom}}">
+               </div>
+             </div>
+            </div>
+           <div class="row">
+           <div class="col-md-12 col-lg-12">
+             <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+               <span class="input-group-addon" style="width:100px;">Descripció</span>
+               <input type="text" class="form-control" aria-describedby="basic-addon1" name="modalDescripcio">
+             </div>
+            </div>
+           </div>
+           <div class="row">
+             <div class="col-md-12 col-lg-12">
+               <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                 <span class="input-group-addon" id="posicio" style="width:100px;">Usuari</span>
+                 <input type="text" class="form-control" aria-describedby="basic-addon1" name="modalUsuari" disabled>
+               </div>
+             </div>
+           </div>
+           </div>
+         </form>
+       </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
+       <button type="button" class="btn btn-success editar">Editar</button>
+     </div>
+     </div>
+   </div>
+ </div>
+</template>
