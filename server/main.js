@@ -11,3 +11,6 @@ import '../imports/api/rols/methods.js';
 import insercions from '../imports/startup/server/index.js';
 insercions();
 // Insercions inicials de la base de dades //
+
+import '../imports/api/llico/llico.js';
+import '../imports/api/llico/metodes.js';

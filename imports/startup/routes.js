@@ -1,6 +1,8 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
+import '../ui/pages/llico/llico.js';
+
 
 
 
@@ -28,4 +30,7 @@ Router.route('/llistatUsuaris',function(){
 });
 Router.route('/grups',function(){
     this.render('grups');
+});
+Router.route('/llico',function(){
+ this.render('llico');
 });
