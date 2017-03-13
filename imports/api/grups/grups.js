@@ -3,13 +3,13 @@ import { Tabular } from 'meteor/aldeed:tabular';
 import { Template } from 'meteor/templating';
 import moment from 'moment';
 import { Meteor } from 'meteor/meteor';
-import { Grups } from '../old/collections/grups';
+import { Grups } from '../old/collections/grups.js';
 
 TabularTables = {};
 
 Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
 
-TabularTables.Tema = new Tabular.Table({
+TabularTables.Grups = new Tabular.Table({
     name: "Grups",
     collection: Grups,
     columns: [
