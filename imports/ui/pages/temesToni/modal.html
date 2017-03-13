@@ -44,8 +44,13 @@
          </form>
        </div>
      <div class="modal-footer">
-       <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
-       <button type="button" class="btn btn-success editar">Editar</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Tancar</button>
+       {{#if accio}}
+         <button type="button" class="btn btn-success editar">Editar</button>
+         <button type="button" class="btn btn-danger eliminar">Eliminar</button>
+       {{else}}
+        <button type="button" class="btn btn-success desar">Desar</button>
+       {{/if}}
      </div>
      </div>
    </div>

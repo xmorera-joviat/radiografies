@@ -12,9 +12,9 @@ TemaSchema = new SimpleSchema({
         type: String,
         label: 'Usuari',
         optional: false,
-        /* autoValue: function () {
+        autoValue: function () {
             return this.userId;
-        }*/
+        }
     },
     'dataCreacio': {
         type: String,

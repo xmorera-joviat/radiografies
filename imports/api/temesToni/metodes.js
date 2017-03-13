@@ -6,18 +6,10 @@ import { Tema } from "../old/collections/tema.js";
 export const editarTema = new ValidatedMethod({
     name: "tema.edit",
     validate: new SimpleSchema({
-        id: {
-            type: String
-        },
-        nom: {
-            type: String
-        },
-        descripcio: {
-            type: String
-        },
-        usuari: {
-            type: String
-        }
+        id: {type: String},
+        nom: {type: String},
+        descripcio: {type: String},
+        usuari: {type: String}
     }).validator(),
     run({
         id,
@@ -39,4 +31,37 @@ export const editarTema = new ValidatedMethod({
             }
         });
     }
+});
+
+export const crearTema = new ValidatedMethod({
+  name: "tema.add",
+  validate: new SimpleSchema({
+      nom: {type: String},
+      descripcio: {type: String},
+      usuari: {type: String}
+  }).validator(),
+  run({
+      nom,
+      descripcio,
+      usuari
+    }) {
+    if(!this.userId){
+		throw new Meteor.Error("tema.add.unauthorized",
+        "Permís denegat. Cal estar identificat");
+	}
+	return Tema.insert({nom:nom,descripcio:descripcio});
+  }
+});
+export const eliminarTema = new ValidatedMethod({
+  name: "tema.remove",
+  validate: new SimpleSchema({
+      id: { type: String}
+  }).validator(),
+  run({id}) {
+    if(!this.userId){
+		throw new Meteor.Error("tema.remove.unauthorized",
+        "Permís denegat. Cal estar identificat");
+	}
+	return Tema.remove({_id: id});
+  }
 });

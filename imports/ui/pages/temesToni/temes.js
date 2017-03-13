@@ -8,6 +8,7 @@ Template.temes.events({
         var dataTable = $(event.target).closest('table').DataTable();
         var rowData = dataTable.row(event.currentTarget).data();
 
+        Session.set('accio','editar');
         Modal.show('temaModal');
 
         $('input[name="modalId"]').val(rowData._id);
@@ -15,4 +16,8 @@ Template.temes.events({
         $('input[name="modalDescripcio"]').val(rowData.descripcio);
         $('input[name="modalUsuari"]').val(rowData.usuari);
     },
+    'click .crear': function() {
+      Session.set('accio','crear');
+      Modal.show('temaModal')
+    }
 });
