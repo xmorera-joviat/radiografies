@@ -1,7 +1,7 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
-
+import '../ui/pages/temes/temes.js';
 
 
 Router.configure({
@@ -20,8 +20,8 @@ Router.route('/exemplePaginacio',function(){
 Router.route('/rols',function(){
   this.render('rols');
 });
-Router.route('/tema',function(){
-    this.render('tema');
+Router.route('/temes',function(){
+ this.render('temes');
 });
 Router.route('/llistatUsuaris',function(){
     this.render('llistatUsers');
