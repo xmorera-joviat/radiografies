@@ -16,6 +16,37 @@ TabularTables.Tema = new Tabular.Table({
         {data: "descripcio", title: "Descripció"},
         {
             tmpl: Meteor.isClient && Template.temaActionBtns, class: "col-md-1"
+
         }
     ]
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
