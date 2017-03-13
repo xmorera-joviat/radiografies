@@ -19,3 +19,17 @@ export const editarGrups = new ValidatedMethod({
 	 return Grups.update({_id: id},{$set:{nom:nom,cursId:cursId,tutorId:tutorId}});
  	}
 });
+
+export const eliminarGrups = new ValidatedMethod({
+	name: "grups.remove",
+	validate: new SimpleSchema({
+		 id: { type: String}
+	 }).validator(),
+	run({id}) {
+		if(!this.userId){
+			throw new Meteor.Error("grups.remove.unauthorized",
+	 		"Permís denegat. Cal estar identificat");
+	 	}
+	 return Grups.remove({_id: id});
+ 	}
+});

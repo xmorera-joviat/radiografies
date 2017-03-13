@@ -9,7 +9,14 @@ export default function () {
       nom: 'Dits',
       cursId: '40',
       tutorId: '1'
-      }
+      },
+     );
+    Grups.insert(
+      {
+      nom: 'Dits2',
+      cursId: '402',
+      tutorId: '12'
+      },
      );
   }
 }

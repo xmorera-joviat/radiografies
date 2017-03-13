@@ -1,6 +1,8 @@
 import './modal.html';
 import '../../../api/grups/metodes.js';
 import { editarGrups } from '../../../api/grups/metodes.js';
+import { eliminarGrups } from '../../../api/grups/metodes.js';
+
 
 Template.grupModal.events({
 	"click .editar": function(){
@@ -14,6 +16,21 @@ Template.grupModal.events({
 		nom: modal_nom,
 		cursId: modal_curs,
 		tutorId: modal_tutor
+		}, (err,res) => {
+			if (err) {
+				alert(err);
+			} else {
+				console.log('Registre editat correctament');
+			}
+		Modal.hide();
+		});
+
+ },
+	"click .eliminar": function(){
+	var modal_id = $('input[name="modalId"]').val();
+
+	eliminarGrups.call({
+		id: modal_id
 		}, (err,res) => {
 			if (err) {
 				alert(err);
