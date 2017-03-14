@@ -1,5 +1,5 @@
 // Creat per Aitor G. Vall
-Grups = new Mongo.Collection( 'grups' );
+export const Grups = new Mongo.Collection( 'grups' );
 
 GrupsSchema = new SimpleSchema({
     'nom': {

@@ -5,6 +5,7 @@ import tema from './tema.js';
 import posicionsAnatomiques from './posicionsAnatomiques.js';
 import llico from './llico.js';
 import artefactes from './artefactes.js';
+import grups from './grups.js';
 
 export default function () {
   usuaris();
@@ -13,4 +14,5 @@ export default function () {
   posicionsAnatomiques();
   llico();
   artefactes();
+  grups();
 };

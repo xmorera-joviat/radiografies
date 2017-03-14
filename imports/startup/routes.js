@@ -1,7 +1,7 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
-
+import '../ui/pages/grups/grups.js';
 
 
 Router.configure({

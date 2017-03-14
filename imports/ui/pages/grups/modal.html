@@ -1,0 +1,59 @@
+<template name="grupModal">
+<div class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Tema</h4>
+			</div>
+			<div class="modal-body">
+				<form id="form">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-lg-12">
+								<div class="input-group" style="margin-left:10%;margin-bottom:2%">
+									<span class="input-group-addon" style="width:100px;">Id</span>
+									<input type="text" class="form-control" aria-describedby="basic-addon1"
+									name="modalId" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12">
+								<div class="input-group" style="margin-left:10%;margin-bottom:2%">
+									<span class="input-group-addon" style="width:100px;">Nom Curs</span>
+									<input type="text" class="form-control" aria-describedby="basic-addon1"
+									name="modalNom" value="{{this.nom}}">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12">
+								<div class="input-group" style="margin-left:10%;margin-bottom:2%">
+									<span class="input-group-addon" style="width:100px;">ID Tutor</span>
+									<input type="text" class="form-control" aria-describedby="basic-addon1"
+									name="modalTutorId">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12">
+								<div class="input-group" style="margin-left:10%;margin-bottom:2%">
+									<span class="input-group-addon" id="posicio" style="width:100px;">ID Curs
+									</span>
+										<input type="text" class="form-control" aria-describedby="basic-addon1"
+										name="modalCursId" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
+					<button type="button" class="btn btn-success editar">Editar</button>
+					<button type="button" class="btn btn-danger eliminar">Eliminar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</template>
