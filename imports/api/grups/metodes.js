@@ -33,3 +33,19 @@ export const eliminarGrups = new ValidatedMethod({
 	 return Grups.remove({_id: id});
  	}
 });
+
+export const afegirGrups = new ValidatedMethod({
+	name: "grups.afegir",
+	validate: new SimpleSchema({
+		 nom: { type: String},
+		 cursId: { type: String},
+		 tutorId: { type: String}
+	 }).validator(),
+	run({ nom,cursId,tutorId}) {
+		if(!this.userId){
+			throw new Meteor.Error("grups.afegir.unauthorized",
+	 		"Permís denegat. Cal estar identificat");
+	 	}
+	 return Grups.insert({nom:nom,cursId:cursId,tutorId:tutorId});
+ 	}
+});
