@@ -5,6 +5,7 @@ import './modal.js';
 
 Template.temes.events({
 	'click tbody > tr': function (event) {
+		Session.set('accio','editar');
 		var dataTable = $(event.target).closest('table').DataTable();
  		var rowData = dataTable.row(event.currentTarget).data();
  		Modal.show('temaModal');
@@ -13,4 +14,9 @@ Template.temes.events({
 		$('input[name="modalDescripcio"]').val(rowData.descripcio);
 		$('input[name="modalUsuari"]').val(rowData.usuari);
  	},
+ 	'click .crear': function (event) {
+ 		Session.set('accio','crear');
+ 		Modal.show('temaModal');
+ 		$('input[name="modalUsuari"]').val(Meteor.user().profile.name);
+ 	}
 });

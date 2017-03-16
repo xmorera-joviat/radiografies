@@ -17,3 +17,4 @@ TabularTables.Tema = new Tabular.Table({
  		{data: "usuari", title: "Usuari"}
  	]
 });
+
