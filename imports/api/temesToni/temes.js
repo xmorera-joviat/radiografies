@@ -1,3 +1,4 @@
+/* Creat per Toni Salvador */
 import { Tabular } from 'meteor/aldeed:tabular';
 import { Template } from 'meteor/templating';
 import moment from 'moment';

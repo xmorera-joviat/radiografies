@@ -1,3 +1,4 @@
+/* Creat per Toni Salvador */
 import './modal.html';
 import '../../../api/temesToni/metodes.js';
 import { crearTema,editarTema,eliminarTema } from '../../../api/temesToni/metodes.js'
