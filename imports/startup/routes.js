@@ -1,7 +1,8 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
-
+import '../ui/pages/old/homes/professor/home.js';
+import '../ui/pages/llicons/llicons.js';
 
 
 Router.configure({
@@ -10,6 +11,9 @@ Router.configure({
 
 Router.route('/',function(){
   this.render('welcome');
+});
+Router.route('/professor',function(){
+  this.render('professor');
 });
 Router.route('/home',function(){
   this.render('home');
@@ -28,4 +32,7 @@ Router.route('/llistatUsuaris',function(){
 });
 Router.route('/grups',function(){
     this.render('grups');
+});
+Router.route('/llicons',function(){
+ this.render('llicons');
 });
