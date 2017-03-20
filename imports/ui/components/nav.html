@@ -1,6 +1,5 @@
 <template name="nav">
-  <nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container-fluid">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -14,10 +13,9 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{pathFor 'rols'}}">Inici</a></li>
             <li><a href="{{pathFor 'exemplePaginacio'}}">Exemple paginació</a></li>
+            <li><a href="{{pathFor 'temes'}}">TemesToni</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="right" style="margin-right:150px"><a href="#">{{> loginButtons}}</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
-      </div>
-    </nav>
 </template>

@@ -1,6 +1,8 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
+//import '../ui/pages/temes/temaLlistat.js';
+import '../ui/pages/temesToni/temes.js';
 import '../ui/pages/temes/temes.js';
 import '../ui/pages/usuaris/usuaris.js';
 import {Router} from 'meteor/iron:router';
@@ -30,9 +32,17 @@ Router.route('/exemplePaginacio',function(){
 Router.route('/rols',function(){
   this.render('rols');
 });
+/*
 Router.route('/tema',function(){
     this.render('tema');
 });
+*/
+Router.route('/llistatUsuaris',function(){
+    this.render('llistatUsers');
+});
 Router.route('/grups',function(){
     this.render('grups');
+});
+Router.route('/temes',function(){
+ this.render('temes');
 });
