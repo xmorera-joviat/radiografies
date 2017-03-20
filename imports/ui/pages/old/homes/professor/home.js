@@ -1,3 +1,7 @@
+//Jordi i Quique
+import {Meteor} from 'meteor/meteor';
+import './home.html';
+
 Template.professor.helpers({
 
 });

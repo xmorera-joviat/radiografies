@@ -6,6 +6,8 @@ import '../ui/pages/temesToni/temes.js';
 import '../ui/pages/temes/temes.js';
 import '../ui/pages/usuaris/usuaris.js';
 import {Router} from 'meteor/iron:router';
+import '../ui/pages/old/homes/professor/home.js';
+import '../ui/pages/llicons/llicons.js';
 
 
 
@@ -18,6 +20,9 @@ Router.configure({
 });
 Router.route('/',function(){
   this.render('welcome');
+});
+Router.route('/professor',function(){
+  this.render('professor');
 });
 Router.route('/home',function(){
   this.render('home');
@@ -45,4 +50,6 @@ Router.route('/grups',function(){
 });
 Router.route('/temes',function(){
  this.render('temes');
+Router.route('/llicons',function(){
+ this.render('llicons');
 });
