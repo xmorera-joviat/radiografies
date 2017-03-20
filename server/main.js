@@ -20,5 +20,7 @@ import '../imports/api/llicons/metodes.js';
 import insercions from '../imports/startup/server/index.js';
 insercions();
 // Insercions inicials de la base de dades //
-
 import '../imports/api/temesToni/temes.js';
+import '../imports/api/grups/grups.js';
+import '../imports/api/grups/metodes.js';
+

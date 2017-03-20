@@ -8,6 +8,7 @@ import '../ui/pages/usuaris/usuaris.js';
 import {Router} from 'meteor/iron:router';
 import '../ui/pages/old/homes/professor/home.js';
 import '../ui/pages/llicons/llicons.js';
+import '../ui/pages/grups/grups.js';
 
 
 
@@ -54,3 +55,5 @@ Router.route('/temes',function(){
 Router.route('/llicons',function(){
  this.render('llicons');
 });
+
+
