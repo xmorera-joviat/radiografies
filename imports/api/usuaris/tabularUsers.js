@@ -11,7 +11,7 @@ TabularTables.users = new Tabular.Table({
     collection: Meteor.users,
     columns: [
         {data: "_id", title: "Id"},
-        {data: "emails", title: "Mail"},
-        {data: "profile", title: "Rol"}
+        {data: "emails[0].address", title: "Mail"},
+        {data: "profile.name", title: "Rol/Nom"}
     ]
 });

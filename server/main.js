@@ -8,6 +8,7 @@ import '../imports/api/temes/temes.js';
 import '../imports/api/usuaris/tabularUsers.js';
 import '../imports/api/exemplePaginacio/methods.js';
 import '../imports/api/rols/methods.js';
+import '../imports/api/usuaris/metodes.js';
 
 // Insercions inicials de la base de dades //
 import insercions from '../imports/startup/server/index.js';
