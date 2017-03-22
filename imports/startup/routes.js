@@ -1,20 +1,18 @@
 import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
+//import '../ui/pages/temes/temes.js';
 //import '../ui/pages/temes/temaLlistat.js';
 import '../ui/pages/temesToni/temes.js';
 import '../ui/pages/temes/temes.js';
 import '../ui/pages/usuaris/usuaris.js';
 import {Router} from 'meteor/iron:router';
+//import '../ui/pages/temes/temaLlistat.js';
+import '../ui/pages/temesToni/temes.js';
 import '../ui/pages/old/homes/professor/home.js';
 import '../ui/pages/llicons/llicons.js';
 import '../ui/pages/grups/grups.js';
 
-
-
-Router.route('/temes',function(){
- this.render('temes');
-});
 
 Router.configure({
   layoutTemplate: 'baseLayout'
