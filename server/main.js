@@ -14,6 +14,7 @@ import '../imports/api/temesToni/metodes.js';
 import '../imports/api/usuaris/metodes.js';
 import '../imports/api/llicons/llicons.js';
 import '../imports/api/llicons/metodes.js';
+import '../imports/api/temesToni/metodes.js';
 
 
 // Insercions inicials de la base de dades //
