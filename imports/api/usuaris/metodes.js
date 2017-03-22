@@ -58,7 +58,7 @@ run({emails,name}) {
     //Meteor.Accounts.setUsername(id, name);
     //return Meteor.users.update({_id: id},{$set:{address:emails,profile:name}});
     let pfl = {'name': name};
-    let mail = [{"address": "tst4@alfa.es", "verified": false}];
+    let mail = [{"address": emails, "verified": false}];
 
     return Meteor.users.insert({emails:mail,profile:pfl});
   }
