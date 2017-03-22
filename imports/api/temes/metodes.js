@@ -2,7 +2,7 @@
 import { Meteor } from "meteor/meteor";
 import { ValidatedMethod } from "meteor/mdg:validated-method";
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
-import { TemaSchema } from './temes.js';
+import { TemaSchema, Temes } from './temes.js';
 
 export const editarTema = new ValidatedMethod({
     name: "Temes.edit",

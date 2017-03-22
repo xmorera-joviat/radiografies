@@ -3,11 +3,11 @@
  */
 
 import {Meteor} from 'meteor/meteor';
-import {Tema} from '../grups.js';
+import {Grups} from '../grups.js';
 
 export default function () {
   Meteor.publish('grup', function () {
-      return Grup.find({});
+      return Grups.find({});
   });
 };
 

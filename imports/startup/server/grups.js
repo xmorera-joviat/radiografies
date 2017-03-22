@@ -2,7 +2,7 @@
  * Created by Marc on 13/3/17.
  */
 import { Meteor } from 'meteor/meteor';
-import {Grups} from '../../api/old/collections/grups.js';
+import {Grups} from '../../api/grups/grups.js';
 
 export default function () {
     if (Grups.find({}).count() === 0) {

@@ -5,7 +5,7 @@
 import { Meteor } from "meteor/meteor";
 import { ValidatedMethod } from "meteor/mdg:validated-method";
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
-import { Grups } from "../old/collections/grups.js";
+import { GrupSchema, Grups } from './grups.js';
 
 export const editarGrups = new ValidatedMethod({
      name: "grups.edit",

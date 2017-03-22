@@ -12,8 +12,6 @@ Template.grup
 */
 Template.grupModal.events({
 
-
-
     "click .editar": function(){
 
         var modal_id = $('input[name="modalId"]').val();

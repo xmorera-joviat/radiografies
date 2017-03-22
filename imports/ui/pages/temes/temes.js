@@ -1,5 +1,5 @@
 /* Creat per Toni Salvador */
-import '../../../api/temesToni/temes.js';
+import '../../../api/temes/temes.js';
 import './temes.html';
 import { Modal } from 'meteor/peppelg:bootstrap-3-modal';
 import './modal.js';
