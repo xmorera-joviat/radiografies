@@ -7,9 +7,8 @@ import { Template } from 'meteor/templating';
 import moment from 'moment';
 import { Meteor } from 'meteor/meteor';
 import { Grups } from '../old/collections/grups.js';
-TabularTables = {};
-Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
-TabularTables.Grups = new Tabular.Table({
+
+new Tabular.Table({
     name: "Grups",
     collection: Grups,
     columns: [

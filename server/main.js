@@ -10,18 +10,16 @@ import '../imports/api/temes/temes.js';
 import '../imports/api/usuaris/tabularUsers.js';
 import '../imports/api/exemplePaginacio/methods.js';
 import '../imports/api/rols/methods.js';
-import '../imports/api/temesToni/metodes.js';
+import '../imports/api/temes/metodes.js';
 import '../imports/api/usuaris/metodes.js';
 import '../imports/api/llicons/llicons.js';
 import '../imports/api/llicons/metodes.js';
-import '../imports/api/temesToni/metodes.js';
-
 
 // Insercions inicials de la base de dades //
 import insercions from '../imports/startup/server/index.js';
 insercions();
 // Insercions inicials de la base de dades //
-import '../imports/api/temesToni/temes.js';
+import '../imports/api/temes/temes.js';
 import '../imports/api/grups/grups.js';
 import '../imports/api/grups/metodes.js';
 

@@ -4,9 +4,8 @@ import { Template } from 'meteor/templating';
 import moment from 'moment';
 import { Meteor } from 'meteor/meteor';
 import { Llico } from '../old/collections/llico.js';
-TabularTables = {};
-Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
-TabularTables.Llico = new Tabular.Table({
+
+Tabular.Table({
  name: "Llico",
  collection: Llico,
  columns: [
