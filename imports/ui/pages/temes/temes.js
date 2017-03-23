@@ -2,6 +2,7 @@ import '../../../api/temes/temes.js';
 import './temes.html';
 //import { Modal } from 'rtmeteor/peppelg:bootstrap-3-modal';
 import './modal.js';
+import { Tema } from '../../../api/old/collections/tema.js';
 
 Template.temes.events({
 	'click tbody > tr': function (event) {
@@ -19,4 +20,13 @@ Template.temes.events({
  		Modal.show('temaModal');
  		$('input[name="modalUsuari"]').val(Meteor.user().profile.name);
  	}
+});
+Template.usuariNom.helpers({
+	nomUsuari: function(){
+		var nomUsuari = Meteor.users.find({id: Tema.usuari});
+		console.log(nomUsuari);
+		return nomUsuari;
+
+	}
+	
 });

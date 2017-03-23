@@ -14,7 +14,14 @@ TabularTables.Tema = new Tabular.Table({
  		{data: "_id", title: "id"},
  		{data: "nom", title: "Nom"},
  		{data: "descripcio", title: "Descripcio"},
- 		{data: "usuari", title: "Usuari"}
- 	]
+ 		{data: "usuari", title: "idUsuari"},
+ 		{title:"Usuari",mpl: Meteor.isClient && Template.usuariNom,
+		tmplContext(usuariNom) {
+			    return {
+			      item: usuariNom,
+			      column: 'title:aixonofuncioina'
+			    };
+		}
+	 	}
+ 	]	
 });
-
