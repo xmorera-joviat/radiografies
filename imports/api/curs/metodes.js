@@ -4,17 +4,16 @@ import { ValidatedMethod } from "meteor/mdg:validated-method";
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
 import { CursSchema, Curs } from './curs.js';
 
-export const editarTema = new ValidatedMethod({
-    name: "Curs.edit",
+export const editarCurs = new ValidatedMethod({
+    name: "editarCurs",
     validate: CursSchema.validator(),
     run({
         id,
         nom,
-        descripcio,
-        usuari
+        descripcio
     }) {
         if (!this.userId) {
-            throw new Meteor.Error("Curs.edit.unauthorized",
+            throw new Meteor.Error("editarCurs.unauthorized",
                 "Permís denegat. Cal estar identificat");
         }
         return Curs.update({
@@ -22,8 +21,7 @@ export const editarTema = new ValidatedMethod({
         }, {
             $set: {
                 nom: nom,
-                descripcio: descripcio,
-                usuari: usuari
+                descripcio: descripcio
             }
         });
     }
@@ -33,8 +31,7 @@ export const crearCurs = new ValidatedMethod({
   name: "Curs.add",
   validate: new SimpleSchema({
       nom: {type: String},
-      descripcio: {type: String},
-      usuari: {type: String}
+      descripcio: {type: String}
   }).validator(),
   run({
       nom,

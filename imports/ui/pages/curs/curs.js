@@ -15,7 +15,6 @@ Template.curs.events({
         $('input[name="modalId"]').val(rowData._id);
         $('input[name="modalNom"]').val(rowData.nom);
         $('input[name="modalDescripcio"]').val(rowData.descripcio);
-        $('input[name="modalUsuari"]').val(rowData.usuari);
     },
     'click .crear': function() {
       Session.set('accio','crear');

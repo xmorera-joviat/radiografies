@@ -18,7 +18,7 @@ export const CursSchema = new SimpleSchema({
     'created_by': {
         type: String,
         label: 'Usuari',
-        optional: false,
+        optional: true,
         autoValue: function () {
             return this.userId;
         }

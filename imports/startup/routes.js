@@ -16,9 +16,7 @@ Router.configure({
 Router.route('/',function(){
   this.render('welcome');
 });
-Router.route('/professor',function(){
-  this.render('professor');
-});
+
 Router.route('/home',function(){
   this.render('home');
 });

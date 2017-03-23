@@ -1,20 +1,17 @@
 /* Creat per Toni Salvador */
 import './modal.html';
-import '../../../api/curs/metodes.js';
 import { crearCurs,editarCurs,eliminarCurs } from '../../../api/curs/metodes.js'
 
-Template.temaModal.events({
+Template.cursModal.events({
  "click .editar": function(event, template){
     var modal_id = $('input[name="modalId"]').val();
     var modal_nom = $('input[name="modalNom"]').val();
     var modal_descripcio = $('input[name="modalDescripcio"]').val();
-    var modal_usuari = $('input[name="modalUsuari"]').val();
 
   editarCurs.call({
   id: modal_id,
   nom: modal_nom,
-  descripcio: modal_descripcio,
-  usuari: modal_usuari
+  descripcio: modal_descripcio
   }, (err,res) => {
   if (err) {
   alert(err);
@@ -24,8 +21,6 @@ Template.temaModal.events({
   Modal.hide();
   });
 
-  Meteor.call('editarCurs', obj, id);
-  Modal.hide();
 },
 "click .eliminar": function(event, template){
 
@@ -47,13 +42,11 @@ Template.temaModal.events({
 
   var modal_nom = $('input[name="modalNom"]').val();
   var modal_descripcio = $('input[name="modalDescripcio"]').val();
-  var modal_usuari = $('input[name="modalUsuari"]').val();
-
+  console.log ("dins desar curs");
   crearCurs.call({
     nom: modal_nom,
-    descripcio: modal_descripcio,
-    usuari: modal_usuari
-  }, (err,res) => {
+	descripcio: modal_descripcio
+    }, (err,res) => {
     if (err) {
       alert(err);
     } else {
