@@ -3,7 +3,7 @@
  */
 
 import {Meteor} from 'meteor/meteor';
-import {Tema} from '../curs.js';
+import {Curs} from '../curs.js';
 
 export default function () {
   Meteor.publish('curs', function () {

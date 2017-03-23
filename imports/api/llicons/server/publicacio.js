@@ -3,10 +3,13 @@
  */
 
 import {Meteor} from 'meteor/meteor';
-import {Temes} from '../temes.js';
+import {Llicons} from '../llicons.js';
 
 export default function () {
-  Meteor.publish('temes', function () {
-      return Temes.find({});
+  Meteor.publish('llicons', function () {
+      return Llicons.find({});
   });
 };
+
+
+
