@@ -1,0 +1,15 @@
+<!-- Creat per Toni Salvador -->
+<template name="curs">
+  {{#if currentUser}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <button type="button" class="btn btn-success crear">crear</button>
+      </div>
+      <div class="panel-body">
+        {{> tabular table=TabularTables.Curs class="table table-striped table-bordered table-condensed"}}
+      </div>
+      <div class="panel-footer">
+      </div>
+    </div>
+  {{/if}}
+</template>
