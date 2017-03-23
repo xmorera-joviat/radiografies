@@ -3,13 +3,10 @@ import '../ui/layouts/baseLayout.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
 import '../ui/pages/temes/temes.js';
-<<<<<<< HEAD
-=======
 import '../ui/pages/usuaris/usuaris.js';
 import '../ui/pages/old/homes/professor/home.js';
 import '../ui/pages/llicons/llicons.js';
 import '../ui/pages/grups/grups.js';
->>>>>>> master
 
 
 Router.configure({
@@ -34,18 +31,22 @@ Router.route('/exemplePaginacio',function(){
 Router.route('/rols',function(){
   this.render('rols');
 });
-<<<<<<< HEAD
-Router.route('/temes',function(){
- this.render('temes');
-});
-=======
 
->>>>>>> master
 Router.route('/llistatUsuaris',function(){
     this.render('llistatUsers');
 });
 Router.route('/grups',function(){
     this.render('grups');
+});
+Router.route('/temes',function(){
+ this.render('temes');
+});
+Router.route('/llicons',function(){
+ this.render('llicons');
+});
+
+
+
 });
 Router.route('/temes',function(){
  this.render('temes');
