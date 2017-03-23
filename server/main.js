@@ -19,16 +19,7 @@ import '../imports/api/llicons/metodes.js';
 import insercions from '../imports/startup/server/index.js';
 insercions();
 // Insercions inicials de la base de dades //
-<<<<<<< HEAD
-
-
-//insercio tabular temes
-import '../imports/api/temes/temes.js';
-	//metode temes
-	import '../imports/api/temes/metodes.js';
-=======
 import '../imports/api/temes/temes.js';
 import '../imports/api/grups/grups.js';
 import '../imports/api/grups/metodes.js';
 
->>>>>>> master

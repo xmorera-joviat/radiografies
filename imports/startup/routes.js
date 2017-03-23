@@ -46,13 +46,3 @@ Router.route('/llicons',function(){
 });
 
 
-
-});
-Router.route('/temes',function(){
- this.render('temes');
-});
-Router.route('/llicons',function(){
- this.render('llicons');
-});
-
-
