@@ -1,8 +1,6 @@
 import './baseLayout.html';
-import '../components/nav.js';
-import '../components/sidebar.js';
-import '../components/offcanvasButton.js';
 import '../components/menu.js';
+import '../components/nav.js';
 
 Template.baseLayout.events({
   "click [data-toggle='offcanvas']": function(){

@@ -1,0 +1,44 @@
+<template name="crearUser">
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Usuariss</h4>
+          </div>
+          <div class="modal-body">
+
+            <form id="form">
+              <div class="container">
+
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                    <span class="input-group-addon" style="width:100px;">Nom</span>
+                    <input type="text" id="nom" class="form-control" aria-describedby="basic-addon1"
+                    name="modalNom" value="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                    <span class="input-group-addon" style="width:100px;">Mail</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1"
+                    name="modalEmail" value="">
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
+              <button type="button" class="btn btn-success nou">Crear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>

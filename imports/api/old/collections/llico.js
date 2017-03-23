@@ -15,7 +15,7 @@ LlicoSchema = new SimpleSchema({
     'tema_tema_id': {
         type: String,
         label: 'Tema ID',
-        optional: false
+        optional: true
     },
     'ordre_llico': {
         type: Number,
@@ -25,7 +25,7 @@ LlicoSchema = new SimpleSchema({
     'tipusllico_id': {
         type: Number,
         label: 'Tipus lliçó ID',
-        optional: false
+        optional: true
     },
     'descripcio': {
         type: String,
