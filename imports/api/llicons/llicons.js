@@ -5,7 +5,7 @@ import moment from 'moment';
 import { Meteor } from 'meteor/meteor';
 import { Llico } from '../old/collections/llico.js';
 
-Tabular.Table({
+new Tabular.Table({
  name: "Llico",
  collection: Llico,
  columns: [

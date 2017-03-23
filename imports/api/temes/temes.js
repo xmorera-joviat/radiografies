@@ -6,7 +6,11 @@ import moment from 'moment';
 export const Temes = new Mongo.Collection( 'temes' );
 
 export const TemaSchema = new SimpleSchema({
-    'nom': {
+    'id': {
+		type: String,
+		optional: true
+    },	
+	'nom': {
         type: String,
         label: 'Nom',
         optional: false
@@ -22,7 +26,7 @@ export const TemaSchema = new SimpleSchema({
     'dataCreacio': {
         type: String,
         label: 'Data de creacio',
-        optional: false,
+        optional: true,
         autoValue: function() {
             if (this.isInsert) {
                 return moment(new Date()).format('LLL');
@@ -55,7 +59,6 @@ export const TemaSchema = new SimpleSchema({
         optional: true
     }
 });
-
 
 new Tabular.Table({
    name: "Temes",
