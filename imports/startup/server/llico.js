@@ -13,7 +13,6 @@ export default function () {
       tipusllico_id: '2',
       descripcio: 'És la lliçó amb referència als dits'
       }
-      
      );
   }
 }

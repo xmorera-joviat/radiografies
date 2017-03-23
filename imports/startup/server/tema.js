@@ -1,80 +1,80 @@
 //creat per Toni Salvador i Martí Gual
 import {Meteor} from 'meteor/meteor';
-import {Temes} from '../../api/temes/temes.js';
+import {Tema} from '../../api/old/collections/tema.js';
 
 export default function () {
-  if (Temes.find({}).count() === 0) {
-      Temes.insert(
+  if (Tema.find({}).count() === 0) {
+      Tema.insert(
           {
               nom: 'Tema 1',
               descripcio: 'descripcio tema 1',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Tema 2',
               descripcio: 'descripcio tema 2',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Tema 3',
               descripcio: 'asjdkjshflhfl afhlf',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Ortodòncia',
               descripcio: 'asd afd ea eAR ',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Implants',
               descripcio: 'E RWE WE WE ',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Elèctrodes',
               descripcio: 'AEF EF FE EFA ',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Metralla',
               descripcio: 'AE fwrr ',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Llimadures metàl·liques',
               descripcio: 'aE FEF E F',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Marcapassos',
               descripcio: 'aEF AEF aEF ',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Altres objectes hospitalaris',
               descripcio: 'AEf aeF AF E',
               usuari: 'prova'
           }
       );
-      Temes.insert(
+      Tema.insert(
           {
               nom: 'Altres objectes personals',
               descripcio: 'AEF AEF AEF A',
