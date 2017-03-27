@@ -4,6 +4,7 @@ import { editarGrups } from '../../../api/grups/metodes.js'
 import { eliminarGrups } from '../../../api/grups/metodes.js'
 import { afegirGrups } from '../../../api/grups/metodes.js'
 import { Session } from 'meteor/session';
+import { Curs } from '../../../api/curs/curs.js';
 
 /*
 var accio = session.set("accio");
@@ -84,5 +85,8 @@ Template.grupModal.helpers({
             return false;
         }
 
+    },
+    curs: function(){
+      return Curs.find()
     }
 });
