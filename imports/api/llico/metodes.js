@@ -24,15 +24,28 @@ export const editarLlico = new ValidatedMethod({
         name: "llico.remove",
         validate: new SimpleSchema({
           id: { type: String},
-          nom: { type: String},
-          percentatge: { type: String},
-          descripcio: { type: String}
          }).validator(),
          run({id,nom,percentatge,tema_tema_id,ordre_llico,tipusllico_id,descripcio}) {
            if(!this.userId){
             throw new Meteor.Error("llico.remove.unauthorized",
              "Permís denegat. Cal estar identificat");
              }
-             return Llico.remove({_id: id},{$set:{llico_nom:nom,descripcio:descripcio,percentatge:percentatge}});
+             return Llico.remove({_id: id});
              }
             });
+
+            export const insertarLlico = new ValidatedMethod({
+              name: "llico.insert",
+              validate: new SimpleSchema({
+                nom: { type: String},
+                percentatge: { type: String},
+                descripcio: { type: String}
+               }).validator(),
+               run({nom,percentatge,tema_tema_id,ordre_llico,tipusllico_id,descripcio}) {
+                 if(!this.userId){
+                  throw new Meteor.Error("llico.insert.unauthorized",
+                   "Permís denegat. Cal estar identificat");
+                   }
+                   return Llico.insert({llico_nom:nom,descripcio:descripcio,percentatge:percentatge});
+                   }
+                  });
