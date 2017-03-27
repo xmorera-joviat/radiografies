@@ -4,19 +4,21 @@ import { editarGrups } from '../../../api/grups/metodes.js'
 import { eliminarGrups } from '../../../api/grups/metodes.js'
 import { afegirGrups } from '../../../api/grups/metodes.js'
 import { Session } from 'meteor/session';
+import { Curs } from '../../../api/curs/curs.js';
 
 /*
 var accio = session.set("accio");
 
 Template.grup
 */
+
 Template.grupModal.events({
 
     "click .editar": function(){
 
         var modal_id = $('input[name="modalId"]').val();
         var modal_nom = $('input[name="modalNom"]').val();
-        var modal_curs_id = $('input[name="modalDescripcio"]').val();
+        var modal_curs_id = $('select[name="modalCurs"]').val();
         var modal_tutor_id = $('input[name="modalUsuari"]').val();
 
         editarGrups.call({
@@ -36,10 +38,8 @@ Template.grupModal.events({
 
     "click .insertar": function(){
 
-
-
         var modal_nom = $('input[name="modalNom"]').val();
-        var modal_curs_id = $('input[name="modalDescripcio"]').val();
+        var modal_curs_id = $('select[name="modalCurs"]').val();
         var modal_tutor_id = $('input[name="modalUsuari"]').val();
 
         afegirGrups.call({
@@ -76,6 +76,7 @@ Template.grupModal.events({
 });
 
 Template.grupModal.helpers({
+
     accio: function(){
         var accio = Session.get('accio');
         if (accio === 'insertar'){
@@ -84,5 +85,8 @@ Template.grupModal.helpers({
             return false;
         }
 
+    },
+    cursos: function() {
+      return Curs.find({});
     }
 });

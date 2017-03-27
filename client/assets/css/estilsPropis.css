@@ -1,25 +1,335 @@
-/*Sergey -> Estils aplicats al menú superior*/
-html,
-body {overflow-x: hidden; /* Prevent scroll on narrow devices */}
-body {padding-top: 70px;}
-footer {padding: 30px 0;}
+/************************ INDEX ****************************/
+/*  mainLayout:           linia 20+
+/*  landing page:         linia 71+
+/*  pujar radiografies:   linia 238+
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************ mainLayout ***********************/
+.icon-bar, .navbar-toggle{
+  background-color:white;
+  border-color: white;
+}
+.navbar-default {
+  background-color: red;
+}
+.sidebar {
+  background-color: white;
+}
+.nav > li > a {
+  color: black;
+}
+.nav > li > a:focus{
+  background-color: rgb(0,149,245);
+  color: white;
+}
+.nav > li > a:hover{
+  background-color: rgba(0, 149, 245, 0.56);
+  color: white;
+}
+.sidebar ul li a.active{
+  background-color: rgb(0,149,245) !important;
+  color: white !important;
+}
+.logo-text, .login-link-text, .login-link-text:hover,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand {
+  color: white;
+}
+.contentYield {
+  margin-top: 16px;
+}
+.page-wrapper {
+  background-color: white;
+}
+body {
+  background-color: white !important;
+}
+.logo-text {
+  position: fixed;
+  left:55px;
+  top:0px;
+}
+.loginbuttons {
+  position: fixed;
+  right:0px;
+  top:14px;
+}
+/************************ Landing page ***********************/
+.img-rad {
+   height: 100%; width: 100%; object-fit: contain;
+}
+.img-logo {
+  height: 32px;
+  position: fixed;
+  left:10px;
+  top:10px;
+}
+
+.login-menu {
+  position: fixed;
+  right:16px;
+  top:0px;
+}
+
+.landing-text {
+  background-color: rgb(0, 0, 0);
+  display: inline-block;
+}
+.well {
+  background-color: white;
+}
+.well > h1, h3{
+  color:black;
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+}
+
+.topnav {
+    font-size: 14px;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/banner_b.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
     position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
 
-  .sidebar-offcanvas {position: absolute; width: 60%; /* 6 columns */display: none;}
-  .row-offcanvas-right {right: 0;}
-  .row-offcanvas-right.active
-  .sidebar-offcanvas {display: block; right: 0;top: 0;z-index: 1;}
-  .row-offcanvas-right.active {}
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/banner_b.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+/******************************** pujar radiografies *******************************/
+/** zoom **/
+.image2-container {
 
 }
+ .slider-val{
+   color: rgb(0,149,245);
+   position: absolute;
+   left: 60px;
+   font-weight: bold;
+ }
+ .sliderRow {
+   margin-top: 32px;
+ }
+ .observacions {
+   margin-top: 16px;
+ }
+ .noUi-connect{
+   background-color: rgb(0,149,245);
+ }
+.noUi-horizontal.noUi-extended {
+  padding-right: 32px;
+}
+.noUi-horizontal.noUi-extended .noUi-handle {
+  left: -1px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin  {
+  right: -32px;
+}
+ div.row .slider {
+
+ }
+ .pujarRad > div {
+   border: solid 1px;
+   border-color: rgb(37,99,171);
+ }
+.pujarRad-imatge {
+  width: 600px;
+  height: 400px;
+  border: solid 1px;
+  border-color: rgb(37,99,171);
+  background-color: black;
+}
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+                /**** radio buttons ***/
+.cc-selector-2 input{
+    position:absolute;
+    z-index:999;
+}
+
+.fi{background-image:url(img/focus/fi.png);}
+.gruixut{background-image:url(img/focus/gruixut.png);}
+.camleft{background-image:url(img/cameres/esquerra.png);border-radius: 5px;}
+.camcent{background-image:url(img/cameres/centre.png);border-radius: 5px;}
+.camright{background-image:url(img/cameres/dreta.png);border-radius: 5px;}
+.directe{background-image:url(img/bucky/directe_custom.png);border-radius: 5px;}
+.mural{background-image:url(img/bucky/mural_custom.png);border-radius: 5px;}
+.taula{background-image:url(img/bucky/taula_custom.png);border-radius: 5px;}
+.petit{background-image:url(img/tamany/petit.png);border-radius: 5px;}
+.mitja{background-image:url(img/tamany/mitja.png);border-radius: 5px;}
+.gran{background-image:url(img/tamany/gran.png);border-radius: 5px;}
+
+.cc-selector-2 input:active +.drinkcard-cc, .cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector-2 input:checked +.drinkcard-cc, .cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:60px;height:60px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.4);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.4);
+            filter: brightness(1.8) grayscale(1) opacity(.4);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+.cc-selector-2 input{ margin: 5px 0 0 12px; }
+.cc-selector-2 label{ margin-left: 7px; }
+span.cc{ color:#6d84b4 }

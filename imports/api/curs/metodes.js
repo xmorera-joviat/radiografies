@@ -5,15 +5,16 @@ import { SimpleSchema } from "meteor/aldeed:simple-schema";
 import { CursSchema, Curs } from './curs.js';
 
 export const editarCurs = new ValidatedMethod({
-    name: "editarCurs",
+    name: "Curs.edit",
     validate: CursSchema.validator(),
     run({
         id,
         nom,
-        descripcio
+        descripcio,
+        created_by
     }) {
         if (!this.userId) {
-            throw new Meteor.Error("editarCurs.unauthorized",
+            throw new Meteor.Error("Curs.edit.unauthorized",
                 "Permís denegat. Cal estar identificat");
         }
         return Curs.update({
@@ -21,7 +22,8 @@ export const editarCurs = new ValidatedMethod({
         }, {
             $set: {
                 nom: nom,
-                descripcio: descripcio
+                descripcio: descripcio,
+                created_by: created_by
             }
         });
     }
@@ -29,27 +31,22 @@ export const editarCurs = new ValidatedMethod({
 
 export const crearCurs = new ValidatedMethod({
   name: "Curs.add",
-  validate: new SimpleSchema({
-      nom: {type: String},
-      descripcio: {type: String}
-  }).validator(),
+  validate: CursSchema.validator(),
   run({
       nom,
       descripcio,
-      usuari
+      created_by
     }) {
     if(!this.userId){
 		throw new Meteor.Error("Curs.add.unauthorized",
         "Permís denegat. Cal estar identificat");
 	}
-	return Curs.insert({nom:nom,descripcio:descripcio});
+	return Curs.insert({nom:nom,descripcio:descripcio, created_by:created_by});
   }
 });
 export const eliminarCurs = new ValidatedMethod({
   name: "Curs.remove",
-  validate: new SimpleSchema({
-      id: { type: String}
-  }).validator(),
+  validate: CursSchema.validator(),
   run({id}) {
     if(!this.userId){
 		throw new Meteor.Error("Curs.remove.unauthorized",

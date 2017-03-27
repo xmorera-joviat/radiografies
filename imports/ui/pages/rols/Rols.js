@@ -7,9 +7,8 @@ import { afegirRol,eliminarRol } from '../../../api/rols/methods.js';
 
 Template.rols.onCreated(function(){
   this.autorun(()=>{
-    Meteor.subscribe('allUsers');
-    //podem fer this pq fem servir una arrow function sinó hauriem
-    //de fer that i declarar un var that = this fora de l'autorun.
+    //Meteor.subscribe('allUsers');
+    Meteor.subscribe('usuaris');
   });
 });
 Template.rols.helpers({

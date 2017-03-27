@@ -1,20 +1,35 @@
 import {Router} from 'meteor/iron:router';
-import '../ui/layouts/baseLayout.js';
+import '../ui/layouts/landingLayout.html';
+import '../ui/layouts/mainLayout.js';
+import '../ui/pages/landing/landing.js';
 import '../ui/pages/rols/Rols.js';
 import '../ui/pages/exemplePaginacio/exemplePaginacio.js';
 import '../ui/pages/temes/temes.js';
+import '../ui/pages/welcome/welcome.js';
 import '../ui/pages/usuaris/usuaris.js';
-import '../ui/pages/old/homes/professor/home.js';
+import '../ui/pages/homes/professor/home.js';
 import '../ui/pages/llicons/llicons.js';
 import '../ui/pages/grups/grups.js';
 import '../ui/pages/curs/curs.js';
+import '../ui/pages/pujarRadiografies/pujar.js';
+import '../ui/components/loading.html';
 
 
 Router.configure({
-  layoutTemplate: 'baseLayout'
+  layoutTemplate: 'mainLayout'
 });
-Router.route('/',function(){
-  this.render('welcome');
+
+Router.route('/', function () {
+  if (this.ready()) {
+    this.render('welcome');
+  }
+  },{
+    name: 'welcome'
+});
+
+Router.route('/landing',function(){
+  this.render('landing');
+  this.layout('landingLayout');
 });
 
 Router.route('/home',function(){
@@ -31,9 +46,6 @@ Router.route('/rols',function(){
   this.render('rols');
 });
 
-Router.route('/llistatUsuaris',function(){
-    this.render('llistatUsers');
-});
 Router.route('/curs',function(){
     this.render('curs');
 });
@@ -46,5 +58,22 @@ Router.route('/temes',function(){
 Router.route('/llicons',function(){
  this.render('llicons');
 });
+Router.route('/pujar',function(){
+    this.render('pujar');
+});
 
-
+//redirigeix l'usuari a login si no està loguejat
+var requireLogin = function(){
+	if(!Meteor.user()){
+		if(Meteor.loggingIn()){
+			Router.go('/');
+			this.next();
+		} else{
+			Router.go('/landing');
+			this.next();
+		}
+	}else{
+		this.next();
+	}
+}
+Router.onBeforeAction(requireLogin);
