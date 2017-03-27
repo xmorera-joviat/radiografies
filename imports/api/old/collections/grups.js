@@ -10,7 +10,7 @@ GrupsSchema = new SimpleSchema({
     'cursId': {
         type: String,
         label: 'Curs ID',
-        optional: false
+        optional: true
     },
     'tutorId': {
         type: String,

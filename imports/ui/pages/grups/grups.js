@@ -5,6 +5,7 @@ import './modal.js';
 
 Template.grups.events({
 	'click tbody > tr': function (event) {
+		Session.set('accio','editar');
 		var dataTable = $(event.target).closest('table').DataTable();
 	 	var rowData = dataTable.row(event.currentTarget).data();
 		Modal.show('grupModal');
@@ -12,5 +13,10 @@ Template.grups.events({
 		$('input[name="modalNom"]').val(rowData.nom);
 		$('input[name="modalCursId"]').val(rowData.cursId);
 		$('input[name="modalTutorId"]').val(rowData.tutorId);
+	},
+	'click .crear': function (event) {
+		Session.set('accio','crear');
+		Modal.show('grupModal');
+
 	},
 });

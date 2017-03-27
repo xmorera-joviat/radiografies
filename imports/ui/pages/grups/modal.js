@@ -2,6 +2,8 @@ import './modal.html';
 import '../../../api/grups/metodes.js';
 import { editarGrups } from '../../../api/grups/metodes.js';
 import { eliminarGrups } from '../../../api/grups/metodes.js';
+import { desarGrups } from '../../../api/grups/metodes.js';
+
 
 
 Template.grupModal.events({
@@ -39,6 +41,39 @@ Template.grupModal.events({
 			}
 		Modal.hide();
 		});
+ },
 
- }
+ "click .desar": function(){
+ var modal_nom = $('input[name="modalNom"]').val();
+ var modal_curs = $('input[name="modalCursId"]').val();
+ var modal_tutor = $('input[name="modalTutorId"]').val();
+
+ desarGrups.call({
+	 nom: modal_nom,
+	 cursId: modal_curs,
+	 tutorId: modal_tutor
+	 }, (err,res) => {
+		 if (err) {
+			 alert(err);
+		 } else {
+			 console.log('Registre desat correctament');
+		 }
+	 Modal.hide();
+	 });
+
+}
+});
+
+Template.grupModal.helpers({
+
+	accio: function(){
+	    var accio = Session.get('accio');
+	    if (accio == 'editar'){
+	      return true;
+	    }else{
+	      return false;
+	    }
+
+	}
+
 });
