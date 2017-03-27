@@ -1,0 +1,67 @@
+<template name="side">
+  <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav navbar-collapse">
+          <ul class="nav" id="side-menu">
+
+              <li>
+                  <a href="#">Plantilles d'exemple<span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level">
+                      <li>
+                          <a href="{{pathFor 'exemplePaginacio'}}" class="list-group-item">exemplePaginacio</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">Gestió<span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#">Administració radiografies<span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                              <a href="{{pathFor 'pujar'}}" class="list-group-item">Pujar</a>
+                            </li>
+                            <li>
+                              <a href="{{pathFor 'llicons'}}" class="list-group-item">Validar</a>
+                            </li>
+                            <li>
+                              <a href="{{pathFor 'llicons'}}" class="list-group-item">Editar</a>
+                            </li>
+                        </ul>
+                    </li>
+                      <li>
+                          <a href="#">Administració Lliçons<span class="fa arrow"></span></a>
+                          <ul class="nav nav-third-level">
+                              <li>
+                                <a href="{{pathFor 'temes'}}" class="list-group-item">Temes</a>
+                              </li>
+                              <li>
+                                <a href="{{pathFor 'llicons'}}" class="list-group-item">Lliçons</a>
+                              </li>
+                              <li>
+                                  <a href="#">Preguntes</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#">Administració Usuaris<span class="fa arrow"></span></a>
+                          <ul class="nav nav-third-level">
+                              <li>
+                                <a href="{{pathFor 'curs'}}" class="list-group-item">Curs</a>
+                              </li>
+                              <li>
+                                <a href="{{pathFor 'grups'}}" class="list-group-item">Grups</a>
+                              </li>
+                              <li>
+                                  <a href="{{pathFor 'usuaris'}}" class="list-group-item">Usuaris</a>
+                              </li>
+                              <li>
+                                  <a href="{{pathFor 'rols'}}" class="list-group-item">Rols</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</template>

@@ -3,12 +3,12 @@
  import moment from 'moment';
  import { Meteor } from 'meteor/meteor';
 
-Tabular.Table({
-    name: "TemaLlistat",
+new Tabular.Table({
+    name: "users",
     collection: Meteor.users,
     columns: [
-        {data: "_id", title: "Id"},
+        {data: "_id", title: "Id", "visible": false},
         {data: "emails[0].address", title: "Mail"},
-        {data: "profile.name", title: "Rol/Nom"}
+        {data: "profile.name", title: "Nom"}
     ]
 });

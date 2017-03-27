@@ -7,6 +7,11 @@ import './grups.html';
 import { Modal } from 'meteor/peppelg:bootstrap-3-modal';
 import './modal.js';
 
+Template.grups.onCreated(function(){
+  this.autorun(()=>{
+    this.subscribe('curs');
+  });
+});
 Template.grups.events({
     'click tbody > tr': function (event) {
         var accio = Session.set("accio","editar");
@@ -15,7 +20,7 @@ Template.grups.events({
         Modal.show('grupModal');
         $('input[name="modalId"]').val(rowData._id);
         $('input[name="modalNom"]').val(rowData.nom);
-        $('input[name="modalDescripcio"]').val(rowData.cursId);
+        $('select[name="modalCurs"]').val(rowData.cursId);
         $('input[name="modalUsuari"]').val(rowData.tutorId);
     },
 
@@ -23,5 +28,5 @@ Template.grups.events({
         var accio = Session.set("accio","insertar");
         Modal.show('grupModal');
 
-    },
+    }
 });

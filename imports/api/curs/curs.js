@@ -9,7 +9,7 @@ export const CursSchema = new SimpleSchema({
     'id': {
 		type: String,
 		optional: true
-    },	
+    },
 	'nom': {
         type: String,
         label: 'Nom',
@@ -34,9 +34,9 @@ new Tabular.Table({
    name: "Curs",
    collection: Curs,
    columns: [
-   {data: "_id", title: "id"},
+   {data: "_id", title: "id","visible": false},
    {data: "nom", title: "Nom"},
    {data: "descripcio", title: "Descripcio"},
-   {data: "usuari", title: "Usuari"}
+   {data: "created_by", title: "Autor"}
    ]
 });

@@ -1,10 +1,121 @@
 <template name="pujar">
-  <div class="container">
-    <h2>Test filesystem</h2>
-    <input type="button" class="btn btn-primary" id="test" value="Clica">
-    <img src="/radiografies/definitives/{{imatges2}}" alt="" style="width:200px">
+  <div class="container pujarRad">
+    <form id="form_id" method="post">
+        <!-- <div class="row">
+          <div class="col-md-2">
+            <input type="button" class="btn btn-primary" id="test" value="mostra">
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="pujarRad-focus">Focus</div>
+                <div class="cc-selector-2">
+                    <input id="fi" type="radio" name="focus" value="fi" />
+                    <label class="drinkcard-cc fi" for="fi"></label>
+
+                    <input id="gruixut" type="radio" name="focus" value="gruixut" />
+                    <label class="drinkcard-cc gruixut" for="gruixut"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="pujarRad-cam">Càmeres</div>
+                <div class="cc-selector-2">
+                    <input id="camleft" type="checkbox" name="camleft" value="camleft" />
+                    <label class="drinkcard-cc camleft" for="camleft"></label>
+
+                    <input id="camcent" type="checkbox" name="camcent" value="camcent" />
+                    <label class="drinkcard-cc camcent" for="camcent"></label>
+
+                    <input id="camright" type="checkbox" name="camright" value="camright" />
+                    <label class="drinkcard-cc camright" for="camright"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="pujarRad-bucky">Bucky</div>
+                <div class="cc-selector-2">
+                    <input id="directe" type="radio" name="bucky" value="directe" />
+                    <label class="drinkcard-cc directe" for="directe"></label>
+
+                    <input id="mural" type="radio" name="bucky" value="mural" />
+                    <label class="drinkcard-cc mural" for="mural"></label>
+
+                    <input id="taula" type="radio" name="bucky" value="taula" />
+                    <label class="drinkcard-cc taula" for="taula"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="pujarRad-size">Tamany Xassís</div>
+                <div class="cc-selector-2">
+                    <input id="petit" type="radio" name="xassis" value="petit" />
+                    <label class="drinkcard-cc petit" for="petit"></label>
+
+                    <input id="mitja" type="radio" name="xassis" value="mitja" />
+                    <label class="drinkcard-cc mitja" for="mitja"></label>
+
+                    <input id="gran" type="radio" name="xassis" value="gran" />
+                    <label class="drinkcard-cc gran" for="gran"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="image-wrapper">
+              <div class="pujarRad-imatge" id="image1-container">
+                <img class="img-rad" src="/radiografies/definitives/{{radiografia}}"/>
+              </div>
+              <div id="image2-container">
+                  <img id="mainimage" src="/radiografies/definitives/{{radiografia}}"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row sliderRow">
+              <div class="col-md-4">
+                <span class="">kW:</span>
+                <span class="slider-val" name="body" id="slide1Text"></span>
+              </div>
+              <div class="col-md-7">
+                  <div class="slider" id="slide1"></div>
+              </div>
+            </div>
+
+            <div class="row sliderRow">
+              <div class="col-md-4">
+                <span class="">mAs:</span>
+                <span class="slider-val" name="body" id="slide2Text"></span>
+              </div>
+              <div class="col-md-7">
+                  <div class="slider" id="slide2"></div>
+              </div>
+            </div>
+
+            <div class="row sliderRow">
+              <div class="col-md-4">
+                <span class="">DFO:</span>
+                <span class="slider-val" name="body" id="slide3Text"></span>
+              </div>
+              <div class="col-md-7">
+                  <div class="slider" id="slide3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 observacions">
+            <div class="pujarRad-obs">Observacions</div>
+            <textarea rows="6" cols="72">
+            </textarea>
+          </div>
+        </div>
+    </form>
+
   </div>
-
-
-
 </template>

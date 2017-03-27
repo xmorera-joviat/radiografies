@@ -10,7 +10,7 @@ Exemples ... -->
     <div class="panel-body">
     <table class="table table-striped">
       <tr>
-        <th>Id</th>
+        <th style="display:none"></th>
         <th>Email</th>
         <th>Rols</th>
         <th>Assignar rol</th>
@@ -18,7 +18,7 @@ Exemples ... -->
       </tr>
         {{#each users}}
           <tr>
-            <td class="user_id">{{_id}}</td>
+            <td class="user_id" style="display:none">{{_id}}</td>
             <td>{{userEmail}}</td>
             <td>{{rols}}</td>
             <td>

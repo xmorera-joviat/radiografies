@@ -1,4 +1,6 @@
-
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+</head>
 <template name="grupModal">
     <div class="modal fade">
         <div class="modal-dialog">
@@ -11,7 +13,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%;display:none">
                                         <span class="input-group-addon" style="width:100px;">Id</span>
                                         <input type="text" class="form-control" aria-describedby="basic-addon1"
                                                name="modalId" disabled>
@@ -31,14 +33,18 @@
                                 <div class="col-md-12 col-lg-12">
                                     <div class="input-group" style="margin-left:10%;margin-bottom:2%">
                                         <span class="input-group-addon" style="width:100px;">Curs ID</span>
-                                        <input type="text" class="form-control" aria-describedby="basic-addon1"
-                                               name="modalDescripcio">
+                                        <select id="modalCurs" class="form-control" name="modalCurs">
+                                          <option value="{{_id}}">Tria un curs</option>
+                                          {{#each cursos}}
+                                          <option value="{{_id}}">{{nom}}</option>
+                                          {{/each}}
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%;">
                                         <span class="input-group-addon" id="posicio" style="width:100px;">Tutor ID</span>
                                         <input type="text" class="form-control" aria-describedby="basic-addon1"
                                                name="modalUsuari">
