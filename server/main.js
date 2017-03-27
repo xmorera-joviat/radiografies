@@ -1,6 +1,8 @@
 // Importació i execució de les publicacions i les seves funcions
 import pubExemple from '../imports/api/exemplePaginacio/server/publicacio.js';
 pubExemple();
+import pubCurs from '../imports/api/curs/server/publicacio.js';
+pubCurs();
 //import prova from '../imports/api/tema/temaTabular.js';
 //prova();
 

@@ -31,8 +31,12 @@
                                 <div class="col-md-12 col-lg-12">
                                     <div class="input-group" style="margin-left:10%;margin-bottom:2%">
                                         <span class="input-group-addon" style="width:100px;">Curs ID</span>
-                                        <input type="text" class="form-control" aria-describedby="basic-addon1"
+                                        <select class="form-control" aria-describedby="basic-addon1"
                                                name="modalDescripcio">
+                                               {{#each curs}}
+                                               <option value="{{_id}}">{{nom}}</option>
+                                               {{/each}}
+                                             </select>
                                     </div>
                                 </div>
                             </div>
