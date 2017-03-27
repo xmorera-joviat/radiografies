@@ -21,3 +21,5 @@ Template.curs.events({
       Modal.show('cursModal')
     }
 });
+
+

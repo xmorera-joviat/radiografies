@@ -25,3 +25,9 @@ Template.grups.events({
 
     },
 });
+
+Template.grups.onCreated(function(){
+    this.autorun(()=>{
+        this.subscribe('curs');
+    });
+});
