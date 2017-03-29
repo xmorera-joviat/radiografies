@@ -86,6 +86,5 @@ Template.grupModal.helpers({
         }
     },
     curs: function(){
-        return Curs.find()
     }
 });
