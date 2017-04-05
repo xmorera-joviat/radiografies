@@ -2,36 +2,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 </head>
 <template name="grupModal">
-    <div class="modal fade">
-        <div class="modal-dialog">
+    <div class="modal fade bd-example-modal-lg">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Grups</h4>
                 </div>
                 <div class="modal-body">
                     <form id="form">
-                        <div class="container">
+                        <div class="container col-md-12">
                             <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%;display:none">
+
+                                    <div style="display:none">
                                         <span class="input-group-addon" style="width:100px;">Id</span>
                                         <input type="text" class="form-control" aria-describedby="basic-addon1"
                                                name="modalId" disabled>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+
+
+
+                                <div class="col-md-4 col-lg-4 ">
+                                    <div class="input-group" style="margin-bottom:2%">
                                         <span class="input-group-addon" style="width:100px;">Nom</span>
                                         <input type="text" class="form-control" aria-describedby="basic-addon1"
                                                name="modalNom" value="{{this.nom}}">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%">
+
+
+                                <div class="col-md-4 col-lg-4 ">
+                                    <div class="input-group" style="margin-bottom:2%">
                                         <span class="input-group-addon" style="width:100px;">Curs ID</span>
                                         <select id="modalCurs" class="form-control" name="modalCurs">
                                           <option value="{{_id}}">Tria un curs</option>
@@ -41,23 +41,25 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="input-group" style="margin-left:10%;margin-bottom:2%;">
+
+
+                                <div class="col-md-4 col-lg-4 ">
+                                    <div class="input-group" style=";margin-bottom:2%;">
                                         <span class="input-group-addon" id="posicio" style="width:100px;">Tutor ID</span>
                                         <input type="text" class="form-control" aria-describedby="basic-addon1"
                                                name="modalUsuari">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+
+                        </div><!--end row -->
+
+                      </div><!--end container -->
                     </form>
-                </div>
+                </div><br><br><br><br>
                 <div class="modal-footer">
 
                         {{#if accio}}
-                    <button type="button" class="btn btn-success insertar">Insertar entrada</button>
+                            <button type="button" class="btn btn-success insertar">Insertar entrada</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
                         {{else}}
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel·lar</button>
