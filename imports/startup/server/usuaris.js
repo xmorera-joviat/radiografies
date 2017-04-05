@@ -8,6 +8,11 @@ export default function () {
           {name:"Usuari professor",email:"professor@joviat.com",roles:['professor']},
           {name:"Usuari alumne",email:"alumne@joviat.com",roles:['alumne']},
           {name:"Usuari administrador",email:"admin@joviat.com",roles:['admin']},
+          {name:"Jordi Farré",email:"farre@joviat.com",roles:['alumne']},
+          {name:"Sergey Musyus",email:"sergey@joviat.com",roles:['alumne']},
+          {name:"Raul Lopez",email:"raul@joviat.com",roles:['alumne']},
+          {name:"Filipao Vasilesao",email:"filipao@joviat.com",roles:['alumne']},
+          {name:"Enric Gonzalez",email:"kike@joviat.com",roles:['alumne']},
           {name:"Usuari convidat",email:"convidat@joviat.com",roles:['']},
     ];
 
