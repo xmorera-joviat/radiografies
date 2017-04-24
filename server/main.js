@@ -5,10 +5,19 @@ import usuaris from '../imports/api/usuaris/server/publicacio.js';
 usuaris();
 import cursos from '../imports/api/curs/server/publicacio.js';
 cursos();
+
 import radiografies from '../imports/api/radiografies/server/publicacio.js';
 radiografies();
 import respostes from '../imports/api/respostes/server/publication.js';
 respostes();
+
+
+import grups from '../imports/api/grups/server/publicacio.js';
+grups();
+import llicons from '../imports/api/llicons/server/publicacio.js';
+llicons();
+import temes from '../imports/api/temes/server/publicacio.js';
+temes();
 
 
 // Importacions de fitxers de mètodes
@@ -23,7 +32,6 @@ import '../imports/api/usuaris/metodes.js';
 import '../imports/api/pujarRads/server/methods.js';
 import '../imports/api/radiografies/methods.js';
 import '../imports/api/respostes/methods.js';
-
 
 // Insercions inicials de la base de dades //
 import insercions from '../imports/startup/server/index.js';

@@ -6,7 +6,7 @@ import {Meteor} from 'meteor/meteor';
 import {Grups} from '../grups.js';
 
 export default function () {
-  Meteor.publish('grup', function () {
+  Meteor.publish('grups', function () {
       return Grups.find({});
   });
 };
