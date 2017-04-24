@@ -7,6 +7,7 @@ import llico from './llico.js';
 import artefactes from './artefactes.js';
 import grups from './grups.js';
 import curs from './curs.js';
+import llegirDir from '../../api/radiografies/methods.js';
 
 export default function () {
   usuaris();
@@ -17,4 +18,5 @@ export default function () {
   artefactes();
   grups();
   curs();
+  llegirDir();
 };

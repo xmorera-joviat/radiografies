@@ -82,7 +82,7 @@
             <div class="row sliderRow">
               <div class="col-md-4">
                 <span class="">kW:</span>
-                <span class="slider-val" name="body" id="slide1Text"></span>
+                <span class="slider-val" name="kw" id="slide1Text"></span>
               </div>
               <div class="col-md-7">
                   <div class="slider" id="slide1"></div>
@@ -92,7 +92,7 @@
             <div class="row sliderRow">
               <div class="col-md-4">
                 <span class="">mAs:</span>
-                <span class="slider-val" name="body" id="slide2Text"></span>
+                <span class="slider-val" name="mas" id="slide2Text"></span>
               </div>
               <div class="col-md-7">
                   <div class="slider" id="slide2"></div>
@@ -102,7 +102,7 @@
             <div class="row sliderRow">
               <div class="col-md-4">
                 <span class="">DFO:</span>
-                <span class="slider-val" name="body" id="slide3Text"></span>
+                <span class="slider-val" name="dfo" id="slide3Text"></span>
               </div>
               <div class="col-md-7">
                   <div class="slider" id="slide3"></div>
@@ -111,10 +111,16 @@
           </div>
           <div class="col-md-8 observacions">
             <div class="pujarRad-obs">Observacions</div>
-            <textarea rows="6" cols="72">
+            <textarea rows="6" cols="72" id="textarea">
             </textarea>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-9">
+            <input type="submit" class="btn btn-success" name="submit" value="Enviar">
+          </div>
+        </div>
+
     </form>
 
   </div>

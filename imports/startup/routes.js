@@ -58,6 +58,7 @@ Router.route('/temes',function(){
 Router.route('/llicons',function(){
  this.render('llicons');
 });
+
 Router.route('/pujar',function(){
     this.render('pujar');
 });

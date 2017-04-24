@@ -23,7 +23,6 @@ import fs from 'fs';
 
 export const methods = {
   llegirDir() {
-    if (Meteor.isServer) {
       var imatges = [];
       var radiografia;
 
@@ -41,8 +40,6 @@ export const methods = {
       radiografia = imatges.shift();
       fs.renameSync(base + 'public/radiografies/importar/' + radiografia, base + 'public/radiografies/definitives/' + radiografia);
       return radiografia;
-    }
-
   }
 }
 Meteor.methods(methods);
